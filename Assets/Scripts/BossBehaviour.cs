@@ -5,19 +5,14 @@ using UnityEngine;
 public class BossBehaviour : MonoBehaviour
 {
     // boss health
+    // now dead event
     // attack 
-    // - pull from list (at random)
- 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //
-    }
+    // access object pool
+    // delay between firing (increase over time)
+    // start rate
+    // end rate
+    // every three minutes increase (public so we can fine tune in editor)
+    // coroutine for firing
+    // + collider to receive collision
+    
 }
