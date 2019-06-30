@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class BossBehaviour : MonoBehaviour
 {
+    public int health;
+    public GameObject orb;
+
+    public void FixedUpdate()
+    {
+        if(Input.GetKeyDown("space"))
+        {
+            Fire();
+        }
+    }
     // boss health
     // now dead event
     // attack 
@@ -14,5 +24,5 @@ public class BossBehaviour : MonoBehaviour
     // every three minutes increase (public so we can fine tune in editor)
     // coroutine for firing
     // + collider to receive collision
-    
+
 }

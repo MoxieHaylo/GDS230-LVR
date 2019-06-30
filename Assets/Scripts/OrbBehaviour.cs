@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbBehavior : MonoBehaviour
+public class OrbBehaviour : MonoBehaviour
 {
     GameObject target; //player
     [System.Serializable]
@@ -22,7 +22,7 @@ public class OrbBehavior : MonoBehaviour
     private void Awake()
     {
         orbType = (OrbType)Random.Range(0, 4);
-        target = gameObject.FindGameObjectWithTag("Player");
+        //target = gameObject.FindGameObjectWithTag("Player");
     }
 
     private void FixedUpdate()
