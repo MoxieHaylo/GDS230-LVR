@@ -15,7 +15,7 @@ public class ObjectPool : MonoBehaviour
         if(orbTypes.Count>0)
         {
             Debug.Log("I'm picking an orb and firing it");
-            orbTypes[0].Reset(spawnPosition);
+            //orbTypes[0].Reset(spawnPosition);
             orbTypes[0].gameObject.SetActive(true);
             orbTypes[0].transform.parent = null; //kick that child out
         }

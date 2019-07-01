@@ -11,7 +11,7 @@ public class BossBehaviour : MonoBehaviour
     {
         if(Input.GetKeyDown("space"))
         {
-            Fire();
+            //Fire();
         }
     }
     // boss health
