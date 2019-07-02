@@ -7,13 +7,7 @@ public class BossBehaviour : MonoBehaviour
     public int health;
     public GameObject orb;
 
-    public void FixedUpdate()
-    {
-        if(Input.GetKeyDown("space"))
-        {
-            //Fire();
-        }
-    }
+  
     // boss health
     // now dead event
     // attack 
