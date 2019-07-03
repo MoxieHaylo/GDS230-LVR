@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class ShieldBehaviour : ColourBase
 {
-    
+
     void ShieldChange()
     {
-        if(Input.GetButtonDown("Button.DpadUp"))//blue
-            {
+        if (Input.GetButtonDown("Button.DpadUp"))//blue
+        {
             Debug.Log("Blue");
-            }
-        else if(Input.GetButtonDown("Button.DpadDown"))//red
-           {
+        }
+        else if (Input.GetButtonDown("Button.DpadDown"))//red
+        {
             Debug.Log("Red");
-           }
-        else if(Input.GetButtonDown("Button.DpadLeft"))//yellow
-           {
+        }
+        else if (Input.GetButtonDown("Button.DpadLeft"))//yellow
+        {
             Debug.Log("Yellow");
            }
         else if(Input.GetButtonDown("Button.DpadRight"))//green
            {
             Debug.Log("Green");
-           }
+        }
     }
 
     public void Miss(Type orbColour)
