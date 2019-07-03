@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShieldBehaviour : MonoBehaviour
+public class ShieldBehaviour : ColourBase
 {
     
     void ShieldChange()
@@ -19,12 +19,72 @@ public class ShieldBehaviour : MonoBehaviour
            {
             Debug.Log("Yellow");
            }
-        else (Input.GetButtonDown("Button.DpadRight"))//green
+        else if(Input.GetButtonDown("Button.DpadRight"))//green
            {
             Debug.Log("Green");
            }
     }
 
+    public void Miss(Type orbColour)
+    {
+        switch (orbColour)
+        {
+            case Type.bOrb:
+                Debug.Log("I'm a blue boi, who missed");
+                break;
+            case Type.yOrb:
+                Debug.Log("I'm a yellow boi, who missed");
+                break;
+            case Type.rOrb:
+                Debug.Log("I'm a red boi, who missed");
+                break;
+            case Type.gOrb:
+                Debug.Log("I'm a green boi, who missed");
+                break;
+            default:
+                Debug.Log("colour not listed");
+                break;
+        }
+    }
 
+    private void Correct(Type orbColour)
+    {
+        switch (orbColour)
+        {
+            case Type.bOrb:
+                Debug.Log("I'm a blue boi. I did not hit her I did not");
+                break;
+            case Type.yOrb:
+                Debug.Log("I'm a yellow boi. I did not hit her I did not");
+                break;
+            case Type.rOrb:
+                Debug.Log("I'm a red boi. I did not hit her I did not");
+                break;
+            case Type.gOrb:
+                Debug.Log("I'm a green boi. I did not hit her I did not");
+                break;
+            default:
+                Debug.Log("colour not listed");
+                break;
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        OrbBase orbBase = other.gameObject.GetComponent<OrbBase>();
+        if (orbBase != null)
+        {
+            
+            if (orbBase.Colour == Colour)
+            {
+                Correct(orbBase.Colour);
+            }
+            else
+            {
+                //Subtract fuction
+                Miss(orbBase.Colour);
+            }
+            Destroy(other.gameObject);
+        }
+    }
 }

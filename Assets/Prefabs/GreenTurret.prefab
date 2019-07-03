@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2015562171896323466}
   - component: {fileID: 6454841423155584992}
   - component: {fileID: 7112388014932505318}
+  - component: {fileID: 8077405257487768075}
   m_Layer: 0
   m_Name: GreenTurret
   m_TagString: Untagged
@@ -91,3 +92,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8077405257487768075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049024145248283684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f940d230582b344b4441a49b45764d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orb: {fileID: 1615444136335299868, guid: 8afbe2d1d3401d34e8b7238a9cb287b3, type: 3}
