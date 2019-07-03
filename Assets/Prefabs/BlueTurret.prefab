@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1460192582240345657}
   - component: {fileID: 6742559655819257489}
   - component: {fileID: 5972417750350117577}
+  - component: {fileID: 7652064256175247820}
   m_Layer: 0
   m_Name: BlueTurret
   m_TagString: Untagged
@@ -105,3 +106,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 1122450355416342627, guid: 9855f42e2d4d8124e9792f2d1d5b898c, type: 3}
+--- !u!114 &7652064256175247820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7155785190913750904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e9d90143c85da4b9218e56ded184ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1838529170471543867}
   - component: {fileID: 8286834517261414981}
   - component: {fileID: 1304790687525541519}
+  - component: {fileID: 5437583632033079267}
   m_Layer: 0
   m_Name: YellowTurret
   m_TagString: Untagged
@@ -105,3 +106,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 3989613473359570802, guid: 6239ba110b2f2cc4cb9333830f0e1ac1, type: 3}
+--- !u!114 &5437583632033079267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937228401988718107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e9d90143c85da4b9218e56ded184ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
