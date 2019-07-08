@@ -4,24 +4,32 @@ using UnityEngine;
 
 public class ShieldBehaviour : ColourBase
 {
+    public GameObject blueShield;
+    public GameObject yellowShield;
+    public GameObject redShield;
+    public GameObject greenShield;
 
-    void ShieldChange()
+
+    //void ShieldChange()
+    void Update()
     {
-        if (Input.GetButtonDown("Button.DpadUp"))//blue
+        if (Input.GetKeyDown("w"))//blue
         {
             Debug.Log("Blue");
+            Instantiate(blueShield);
         }
-        else if (Input.GetButtonDown("Button.DpadDown"))//red
+        else if (Input.GetKeyDown("a"))//red
         {
             Debug.Log("Red");
         }
-        else if (Input.GetButtonDown("Button.DpadLeft"))//yellow
+        else if (Input.GetKeyDown("d"))//yellow
         {
             Debug.Log("Yellow");
            }
-        else if(Input.GetButtonDown("Button.DpadRight"))//green
-           {
+        else if (Input.GetKeyDown("s"))//green
+        {
             Debug.Log("Green");
+            
         }
     }
 
