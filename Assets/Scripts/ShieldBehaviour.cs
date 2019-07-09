@@ -10,13 +10,15 @@ public class ShieldBehaviour : ColourBase
     public GameObject greenShield;
 
 
+   
     //void ShieldChange()
     void Update()
     {
         if (Input.GetKeyDown("w"))//blue
         {
             Debug.Log("Blue");
-            Instantiate(blueShield);
+            blueShield.SetActive(true);
+            blueShield.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
         }
         else if (Input.GetKeyDown("a"))//red
         {
