@@ -9,6 +9,7 @@ public class TurretLogic : MonoBehaviour
     int myCurrentWaypoint;
     public GameObject myProjectile;
     public bool isMoving;
+    public float WaitTime = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class TurretLogic : MonoBehaviour
 
         if(isMoving == false)
         {
+            StartCoroutine("Fire", WaitTime);
             shootProjectile();
         }
     }
@@ -47,11 +49,19 @@ public class TurretLogic : MonoBehaviour
 
         if (Vector3.Distance(this.transform.position, waypoints[myCurrentWaypoint].transform.position) < 0.01f)
         {
+            isMoving = false;
             myCurrentWaypoint = Random.Range(0, waypoints.Length);
         }
     }
 
-    
+    IEnumerator Reset(float Count)
+    {
+        yield return new WaitForSeconds(Count);
+        
+        yield return null;
+    }
+   
+
 
     void shootProjectile()
     {

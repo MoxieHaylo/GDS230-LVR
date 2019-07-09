@@ -314,6 +314,8 @@ MonoBehaviour:
   - {fileID: 798037275}
   myProjectile: {fileID: 7453519125265881893, guid: e923d390f3f7947468cabd2d4284efaa,
     type: 3}
+  isMoving: 0
+  WaitTime: 1
 --- !u!1 &119836363
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393372293}
+  - component: {fileID: 393372294}
   m_Layer: 0
   m_Name: Waypoint10
   m_TagString: Waypoint
@@ -535,6 +538,19 @@ Transform:
   m_Father: {fileID: 2064970666}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &393372294
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393372292}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &731616218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5709,6 +5725,8 @@ MonoBehaviour:
   - {fileID: 1644693967}
   myProjectile: {fileID: 3252284995814287355, guid: e87ed5aed1b48ae49842c8c980617f27,
     type: 3}
+  isMoving: 0
+  WaitTime: 1
 --- !u!1 &1261515445
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,6 +6051,8 @@ MonoBehaviour:
   - {fileID: 379295332}
   myProjectile: {fileID: 3686996287507003184, guid: d0ce0e52e987b2b4abfa1a45d460fa65,
     type: 3}
+  isMoving: 0
+  WaitTime: 1
 --- !u!1 &1644693967
 GameObject:
   m_ObjectHideFlags: 0
@@ -6265,6 +6285,8 @@ MonoBehaviour:
   - {fileID: 393372292}
   myProjectile: {fileID: 778169986576765403, guid: 88eb7f8c036ab564e995999b5b83edaf,
     type: 3}
+  isMoving: 0
+  WaitTime: 1
 --- !u!1 &1763802158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8539925102977147091, guid: 4a8731f0f77a20c42912c4fe8fbcb85b,
@@ -6358,6 +6380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1815277974}
+  - component: {fileID: 1815277975}
   m_Layer: 0
   m_Name: Waypoint7
   m_TagString: Waypoint
@@ -6379,6 +6402,19 @@ Transform:
   m_Father: {fileID: 2064970666}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1815277975
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815277973}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1999734821
 GameObject:
   m_ObjectHideFlags: 0
@@ -6487,9 +6523,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2044048887}
+  - component: {fileID: 2044048888}
   m_Layer: 0
   m_Name: Waypoint6
-  m_TagString: Waypoint
+  m_TagString: FirePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6508,6 +6545,19 @@ Transform:
   m_Father: {fileID: 2064970666}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2044048888
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044048886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2059477782
 GameObject:
   m_ObjectHideFlags: 0
