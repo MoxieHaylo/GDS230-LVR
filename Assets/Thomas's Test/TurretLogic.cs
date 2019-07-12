@@ -7,9 +7,11 @@ public class TurretLogic : MonoBehaviour
 
     public GameObject[] waypoints;
     int myCurrentWaypoint;
+    private int nextWaypoint;
     public GameObject myProjectile;
     public bool isMoving;
     public float WaitTime = 1.0f;
+    public bool run = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +31,9 @@ public class TurretLogic : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (isMoving == true)
+        if (isMoving)
         {
+            run = false;
             MoveToWaypoint();
         }
 
@@ -38,8 +41,9 @@ public class TurretLogic : MonoBehaviour
 
         if(isMoving == false)
         {
-            StartCoroutine("Fire", WaitTime);
-            shootProjectile();
+            if(!run)
+            StartCoroutine(Fire());
+            //shootProjectile();
         }
     }
 
@@ -47,18 +51,28 @@ public class TurretLogic : MonoBehaviour
     {
         this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[myCurrentWaypoint].transform.position, 0.15f);
 
-        if (Vector3.Distance(this.transform.position, waypoints[myCurrentWaypoint].transform.position) < 0.01f)
+        if (transform.position == waypoints[myCurrentWaypoint].transform.position)
         {
             isMoving = false;
-            myCurrentWaypoint = Random.Range(0, waypoints.Length);
+            nextWaypoint = Random.Range(0, waypoints.Length);
+
+            if (nextWaypoint == myCurrentWaypoint)
+            {
+                nextWaypoint = Random.Range(0, waypoints.Length);
+            }
+
+            myCurrentWaypoint = nextWaypoint;
         }
+
     }
 
-    IEnumerator Reset(float Count)
+    public IEnumerator Fire()
     {
-        yield return new WaitForSeconds(Count);
-        
-        yield return null;
+        run = true;
+        yield return new WaitForSeconds(3);
+        shootProjectile();
+        yield return new WaitForSeconds(1);
+        isMoving = true;
     }
    
 
@@ -67,7 +81,7 @@ public class TurretLogic : MonoBehaviour
     {
         GameObject newProjectile = Instantiate(myProjectile, this.transform.position, this.transform.rotation);
 
-        isMoving = true;
+       
     }
     
 }
