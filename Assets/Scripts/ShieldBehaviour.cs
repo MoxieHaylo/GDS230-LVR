@@ -10,28 +10,33 @@ public class ShieldBehaviour : ColourBase
     public GameObject greenShield;
 
 
-   
     //void ShieldChange()
     void Update()
     {
         if (Input.GetKeyDown("w"))//blue
         {
             Debug.Log("Blue");
-            blueShield.SetActive(true);
-            blueShield.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
+            Instantiate(blueShield, new Vector3(0f,0.2f,-16.5f),Quaternion.Euler(-90f,0f,0f));
+            
         }
         else if (Input.GetKeyDown("a"))//red
         {
             Debug.Log("Red");
+            Instantiate(redShield, new Vector3(0f, 0.2f, -16.5f), Quaternion.Euler(-90f, 0f, 0f));
+            
         }
         else if (Input.GetKeyDown("d"))//yellow
         {
             Debug.Log("Yellow");
-           }
+            Instantiate(yellowShield, new Vector3(0f, 0.2f, -16.5f), Quaternion.Euler(-90f, 0f, 0f));
+            
+        }
         else if (Input.GetKeyDown("s"))//green
         {
             Debug.Log("Green");
+            Instantiate(greenShield, new Vector3(0f, 0.2f, -16.5f), Quaternion.Euler(-90f, 0f, 0f));
             
+
         }
     }
 

@@ -2041,25 +2041,25 @@ PrefabInstance:
         type: 3}
       propertyPath: blueShield
       value: 
-      objectReference: {fileID: 1122450355416342627, guid: 9855f42e2d4d8124e9792f2d1d5b898c,
+      objectReference: {fileID: 739299163451179078, guid: d86727c0379b94445a1f1ae59ad0feab,
         type: 3}
     - target: {fileID: 4652259411511425489, guid: 9d9eacb23f08add40ac5ab0b33d90941,
         type: 3}
       propertyPath: redShield
       value: 
-      objectReference: {fileID: 961018457733386974, guid: 1db64a4e55ffe904888bd56242a90a43,
+      objectReference: {fileID: 901787349329224202, guid: d46c17ec9bee1554bab5c044b7a98bd0,
         type: 3}
     - target: {fileID: 4652259411511425489, guid: 9d9eacb23f08add40ac5ab0b33d90941,
         type: 3}
       propertyPath: greenShield
       value: 
-      objectReference: {fileID: 1615444136335299868, guid: 8afbe2d1d3401d34e8b7238a9cb287b3,
+      objectReference: {fileID: 5871546370712365786, guid: 4463cae00464c064bb17c76727a3f581,
         type: 3}
     - target: {fileID: 4652259411511425489, guid: 9d9eacb23f08add40ac5ab0b33d90941,
         type: 3}
       propertyPath: yellowShield
       value: 
-      objectReference: {fileID: 3989613473359570802, guid: 6239ba110b2f2cc4cb9333830f0e1ac1,
+      objectReference: {fileID: 161085883125731442, guid: ef0e9e4bbfc0ac84d880e1a77604734a,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d9eacb23f08add40ac5ab0b33d90941, type: 3}

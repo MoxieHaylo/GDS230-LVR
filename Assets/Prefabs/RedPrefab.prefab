@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Colour: 3
   speed: 3
-  player: {fileID: 0}
+  player: {fileID: 4652259411511425068, guid: 9d9eacb23f08add40ac5ab0b33d90941, type: 3}
 --- !u!54 &6878848878144835831
 Rigidbody:
   m_ObjectHideFlags: 0
