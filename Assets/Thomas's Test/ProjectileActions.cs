@@ -6,6 +6,7 @@ public class ProjectileActions : MonoBehaviour
 {
 
     public GameObject myTarget;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +25,17 @@ public class ProjectileActions : MonoBehaviour
         this.transform.position = Vector3.MoveTowards(this.transform.position, myTarget.transform.position, 0.05f);
     }
 
-    private void OnCollisionEnter(Collision coll)
+    private void OnTriggerEnter(Collider coll)
     {
-        if(coll.gameObject == myTarget)
+        if(coll.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
         }
+        
     }
+
+    
+    
+        
+    
 }

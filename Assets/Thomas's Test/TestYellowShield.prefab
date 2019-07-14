@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5149829163241270955}
   - component: {fileID: 2796336726139631385}
   - component: {fileID: 2923546564734824851}
+  - component: {fileID: 6244243221395312755}
+  - component: {fileID: 1951033038577760178}
   m_Layer: 0
   m_Name: TestYellowShield
   m_TagString: Untagged
@@ -92,3 +94,39 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6244243221395312755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8891970554966614434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734a96f78a39c034aa375adca0e096ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charge: 0
+  targetOrb: {fileID: 3252284995814287355, guid: e87ed5aed1b48ae49842c8c980617f27,
+    type: 3}
+  wrongOrbs:
+  - {fileID: 778169986576765403, guid: 88eb7f8c036ab564e995999b5b83edaf, type: 3}
+  - {fileID: 7453519125265881893, guid: e923d390f3f7947468cabd2d4284efaa, type: 3}
+  - {fileID: 3686996287507003184, guid: d0ce0e52e987b2b4abfa1a45d460fa65, type: 3}
+  myShot: {fileID: 1038340888776229881, guid: e00c941e24ee4d341ae2b68f63d443ba, type: 3}
+--- !u!54 &1951033038577760178
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8891970554966614434}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
