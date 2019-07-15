@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8896813664823150502
 Transform:
   m_ObjectHideFlags: 0
@@ -107,13 +107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charge: 0
-  targetOrb: {fileID: 7453519125265881893, guid: e923d390f3f7947468cabd2d4284efaa,
-    type: 3}
-  wrongOrbs:
-  - {fileID: 778169986576765403, guid: 88eb7f8c036ab564e995999b5b83edaf, type: 3}
-  - {fileID: 3252284995814287355, guid: e87ed5aed1b48ae49842c8c980617f27, type: 3}
-  - {fileID: 3686996287507003184, guid: d0ce0e52e987b2b4abfa1a45d460fa65, type: 3}
+  targetType: 0
   myShot: {fileID: 1038340888776229881, guid: e00c941e24ee4d341ae2b68f63d443ba, type: 3}
+  chargeText: {fileID: 0}
 --- !u!54 &6995246932002880229
 Rigidbody:
   m_ObjectHideFlags: 0

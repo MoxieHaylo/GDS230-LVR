@@ -5,13 +5,13 @@ using UnityEngine;
 public class ProjectileActions : MonoBehaviour
 {
 
-    public GameObject myTarget;
+    GameObject myTarget;
     public OrbType type;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        myTarget = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
