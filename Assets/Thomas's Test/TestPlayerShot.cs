@@ -21,7 +21,7 @@ public class TestPlayerShot : MonoBehaviour
 
     private void FixedUpdate()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, myTarget.transform.position, 0.05f);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, myTarget.transform.position, 0.1f);
     }
 
     private void OnTriggerEnter(Collider coll)

@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myTarget: {fileID: 8539925102977147091, guid: 4a8731f0f77a20c42912c4fe8fbcb85b,
     type: 3}
-  targetShield: {fileID: 0}
+  type: 2
 --- !u!54 &5237746613142801484
 Rigidbody:
   m_ObjectHideFlags: 0
