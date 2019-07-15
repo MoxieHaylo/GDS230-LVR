@@ -107,13 +107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charge: 0
-  targetOrb: {fileID: 778169986576765403, guid: 88eb7f8c036ab564e995999b5b83edaf,
-    type: 3}
-  wrongOrbs:
-  - {fileID: 7453519125265881893, guid: e923d390f3f7947468cabd2d4284efaa, type: 3}
-  - {fileID: 3252284995814287355, guid: e87ed5aed1b48ae49842c8c980617f27, type: 3}
-  - {fileID: 3686996287507003184, guid: d0ce0e52e987b2b4abfa1a45d460fa65, type: 3}
+  targetType: 1
   myShot: {fileID: 1038340888776229881, guid: e00c941e24ee4d341ae2b68f63d443ba, type: 3}
+  chargeText: {fileID: 0}
 --- !u!54 &6194079580831696308
 Rigidbody:
   m_ObjectHideFlags: 0

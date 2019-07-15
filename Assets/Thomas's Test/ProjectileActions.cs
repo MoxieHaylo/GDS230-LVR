@@ -6,7 +6,7 @@ public class ProjectileActions : MonoBehaviour
 {
 
     public GameObject myTarget;
-    
+    public OrbType type;
 
     // Start is called before the first frame update
     void Start()
@@ -39,3 +39,5 @@ public class ProjectileActions : MonoBehaviour
         
     
 }
+
+public enum OrbType { Green, Red, Blue, Yellow}

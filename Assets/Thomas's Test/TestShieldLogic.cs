@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class TestShieldLogic : MonoBehaviour
 {
     public int charge;
-    public GameObject targetOrb;
-    public GameObject[] wrongOrbs;
+    public OrbType targetType;
+    //public GameObject targetOrb;
+    //public GameObject[] wrongOrbs;
     public GameObject myShot;
     public Text chargeText;
 
@@ -25,6 +26,7 @@ public class TestShieldLogic : MonoBehaviour
             if(charge == 100)
             {
                 playerShoot();
+                charge = 0;
             }
         }
 
@@ -34,16 +36,40 @@ public class TestShieldLogic : MonoBehaviour
     public void GainCharge(int amount)
     {
         charge = charge + amount;
+
+        if (charge >= 100)
+        {
+            charge = 100;
+        }
     }
 
     public void LoseCharge(int amount)
     {
         charge = charge + amount;
+
+        if (charge <= 0)
+        {
+            charge = 0;
+        }
     }
 
     private void OnTriggerEnter(Collider coll)
     {
-        if (coll.gameObject == targetOrb)
+        if(coll.GetComponent<ProjectileActions>())
+        {
+            if(coll.GetComponent<ProjectileActions>().type == targetType)
+            {
+                
+                GainCharge(20);
+                Destroy(coll.gameObject);
+            }
+            else
+            {
+                LoseCharge(-20);
+                Destroy(coll.gameObject);
+            }
+        }
+        /*if (coll.gameObject == targetOrb)
         {
 
             GainCharge(20);
@@ -63,7 +89,7 @@ public class TestShieldLogic : MonoBehaviour
         {
             LoseCharge(-20);
             Destroy(coll.gameObject);
-        }
+        }*/
 
         
     }
