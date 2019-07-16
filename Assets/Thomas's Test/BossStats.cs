@@ -7,6 +7,7 @@ public class BossStats : MonoBehaviour
 {
     public int health;
     public Text BossHealthText;
+    public GameObject[] Turrets;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,21 @@ public class BossStats : MonoBehaviour
     void Update()
     {
         BossHealthText.text = health.ToString();
+
+        if (health == 80)
+        {
+            Turrets[0].SetActive(true);
+        }
+
+        if (health == 60)
+        {
+            Turrets[1].SetActive(true);
+        }
+
+        if (health == 40)
+        {
+            Turrets[2].SetActive(true);
+        }
     }
 
     public void ChangeHealth(int amount)

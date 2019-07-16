@@ -5,53 +5,26 @@ using UnityEngine.UI;
 
 public class TestShieldLogic : MonoBehaviour
 {
-    public int charge;
+    
     public OrbType targetType;
+    TestDeviceLogic charge;
     //public GameObject targetOrb;
     //public GameObject[] wrongOrbs;
-    public GameObject myShot;
-    public Text chargeText;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        charge = 0;
+        charge = GetComponentInParent<TestDeviceLogic>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("x"))
-        {
-            if(charge == 100)
-            {
-                playerShoot();
-                charge = 0;
-            }
-        }
-
-        chargeText.text = charge.ToString();
+        
     }
 
-    public void GainCharge(int amount)
-    {
-        charge = charge + amount;
-
-        if (charge >= 100)
-        {
-            charge = 100;
-        }
-    }
-
-    public void LoseCharge(int amount)
-    {
-        charge = charge + amount;
-
-        if (charge <= 0)
-        {
-            charge = 0;
-        }
-    }
+    
 
     private void OnTriggerEnter(Collider coll)
     {
@@ -60,12 +33,12 @@ public class TestShieldLogic : MonoBehaviour
             if(coll.GetComponent<ProjectileActions>().type == targetType)
             {
                 
-                GainCharge(20);
+                charge.GainCharge(20);
                 Destroy(coll.gameObject);
             }
             else
             {
-                LoseCharge(-20);
+                charge.LoseCharge(-20);
                 Destroy(coll.gameObject);
             }
         }
@@ -94,10 +67,7 @@ public class TestShieldLogic : MonoBehaviour
         
     }
 
-    public void playerShoot()
-    {
-        GameObject newShot = Instantiate(myShot, this.transform.position, this.transform.rotation);
-    }
+    
 
     
 

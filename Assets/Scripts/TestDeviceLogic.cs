@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class TestDeviceLogic : MonoBehaviour
 {
 
     public GameObject[] Shields;
+    public int charge;
+    public GameObject myShot;
+    public Text chargeText;
+
     public static UnityAction<bool> onHasController = null;
 
     public static UnityAction onTriggerUp = null;
@@ -26,7 +31,7 @@ public class TestDeviceLogic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-           
+        charge = 0;
     }
 
     private void OnDestroy()
@@ -73,6 +78,17 @@ public class TestDeviceLogic : MonoBehaviour
             Shields[2].SetActive(false);
             Shields[3].SetActive(true);
         }
+
+        if (Input.GetKeyDown("x"))
+        {
+            if (charge == 100)
+            {
+                playerShoot();
+                charge = 0;
+            }
+        }
+
+        chargeText.text = charge.ToString();
     }
 
     private bool CheckForController(bool currentValue)
@@ -97,6 +113,33 @@ public class TestDeviceLogic : MonoBehaviour
     private void PlayerLost()
     {
         inputActive = false;
+    }
+
+
+
+    public void GainCharge(int amount)
+    {
+        charge = charge + amount;
+
+        if (charge >= 100)
+        {
+            charge = 100;
+        }
+    }
+
+    public void LoseCharge(int amount)
+    {
+        charge = charge + amount;
+
+        if (charge <= 0)
+        {
+            charge = 0;
+        }
+    }
+
+    public void playerShoot()
+    {
+        GameObject newShot = Instantiate(myShot, this.transform.position, this.transform.rotation);
     }
 
 }
