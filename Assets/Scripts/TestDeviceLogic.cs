@@ -40,8 +40,14 @@ public class TestDeviceLogic : MonoBehaviour
         OVRManager.HMDMounted -= PlayerLost;
     }
 
+    // HACK
+    public TextMesh textTest;
+
+
     void Update()
     {
+
+        Debug.Log("pre-testing isAcitve");
         if (!inputActive)
             return;
 
@@ -79,6 +85,19 @@ public class TestDeviceLogic : MonoBehaviour
             Shields[3].SetActive(true);
         }
 
+        Debug.Log("update is working");
+
+        // textTest.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
+        textTest.text = OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.Active).ToString();
+
+        if (OVRInput.Get(OVRInput.Button.Any) || OVRInput.GetDown(OVRInput.Touch.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || OVRInput.GetDown(OVRInput.Touch.SecondaryThumbstick) || OVRInput.GetDown(OVRInput.Touch.SecondaryTouchpad))
+        {
+            Debug.Log("is working");
+            Shields[0].SetActive(false);
+            Shields[1].SetActive(false);
+            Shields[2].SetActive(false);
+            Shields[3].SetActive(false);
+        }
         if (Input.GetKeyDown("x"))
         {
             if (charge == 100)
