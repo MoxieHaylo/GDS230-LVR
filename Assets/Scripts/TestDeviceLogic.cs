@@ -53,7 +53,9 @@ public class TestDeviceLogic : MonoBehaviour
 
         hasController = CheckForController(hasController);
 
-        if (OVRInput.GetDown(OVRInput.Button.DpadUp)||Input.GetKeyDown("w")) //Red Shield Activation
+
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickUp) ||            
+            Input.GetKeyDown("w")) //Red Shield Activation
         {
             if (onTriggerDown != null)
                 onTriggerDown();
@@ -63,21 +65,24 @@ public class TestDeviceLogic : MonoBehaviour
             Shields[2].SetActive(false);
             Shields[3].SetActive(false);
         }
-        if (OVRInput.GetDown(OVRInput.Button.DpadDown) || Input.GetKeyDown("a")) //Green Shield Activation
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || 
+            Input.GetKeyDown("a")) //Green Shield Activation
         {
             Shields[0].SetActive(false);
             Shields[1].SetActive(true);
             Shields[2].SetActive(false);
             Shields[3].SetActive(false);
         }
-        if (OVRInput.GetDown(OVRInput.Button.DpadRight)|| Input.GetKeyDown("s")) //Yellow Shield Activation
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickLeft) || 
+            Input.GetKeyDown("s")) //Yellow Shield Activation
         {
             Shields[0].SetActive(false);
             Shields[1].SetActive(false);
             Shields[2].SetActive(true);
             Shields[3].SetActive(false);
         }
-        if (OVRInput.GetDown(OVRInput.Button.DpadLeft)|| Input.GetKeyDown("d")) //Blue Shield Activation
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickRight) || 
+            Input.GetKeyDown("d")) //Blue Shield Activation
         {
             Shields[0].SetActive(false);
             Shields[1].SetActive(false);
