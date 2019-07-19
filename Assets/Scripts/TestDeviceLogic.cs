@@ -46,63 +46,114 @@ public class TestDeviceLogic : MonoBehaviour
 
     void Update()
     {
-
-        Debug.Log("pre-testing isAcitve");
-        if (!inputActive)
+        /*if (!inputActive)
+        {
+            textTest.text = "FAILED";
             return;
+        }*/
 
         hasController = CheckForController(hasController);
 
 
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickUp) ||            
-            Input.GetKeyDown("w")) //Red Shield Activation
-        {
-            if (onTriggerDown != null)
-                onTriggerDown();
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickUp) ||            
+        //    Input.GetKeyDown("w")) //Red Shield Activation
+        //{
+        //    if (onTriggerDown != null)
+        //        onTriggerDown();
 
+        //    Shields[0].SetActive(true);
+        //    Shields[1].SetActive(false);
+        //    Shields[2].SetActive(false);
+        //    Shields[3].SetActive(false);
+        //}
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || 
+        //    Input.GetKeyDown("a")) //Green Shield Activation
+        //{
+        //    Shields[0].SetActive(false);
+        //    Shields[1].SetActive(true);
+        //    Shields[2].SetActive(false);
+        //    Shields[3].SetActive(false);
+        //}
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickLeft) || 
+        //    Input.GetKeyDown("s")) //Yellow Shield Activation
+        //{
+        //    Shields[0].SetActive(false);
+        //    Shields[1].SetActive(false);
+        //    Shields[2].SetActive(true);
+        //    Shields[3].SetActive(false);
+        //}
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickRight) || 
+        //    Input.GetKeyDown("d")) //Blue Shield Activation
+        //{
+        //    Shields[0].SetActive(false);
+        //    Shields[1].SetActive(false);
+        //    Shields[2].SetActive(false);
+        //    Shields[3].SetActive(true);
+        //}
+
+        Debug.Log("update is working");
+
+        Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
+
+        if (primaryTouchpad.y > 0.2f)
+        {
+            Debug.Log("Top");
+            textTest.text = "TOP";
             Shields[0].SetActive(true);
             Shields[1].SetActive(false);
             Shields[2].SetActive(false);
             Shields[3].SetActive(false);
+
         }
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || 
-            Input.GetKeyDown("a")) //Green Shield Activation
+        else if (primaryTouchpad.y < -0.2f)
         {
+            Debug.Log("Bottom");
+            textTest.text = "BOTTOM";
             Shields[0].SetActive(false);
             Shields[1].SetActive(true);
             Shields[2].SetActive(false);
             Shields[3].SetActive(false);
         }
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickLeft) || 
-            Input.GetKeyDown("s")) //Yellow Shield Activation
+        else
         {
-            Shields[0].SetActive(false);
-            Shields[1].SetActive(false);
-            Shields[2].SetActive(true);
-            Shields[3].SetActive(false);
+            if (primaryTouchpad.x > 0.2f)
+            {
+                Debug.Log("Right");
+                textTest.text = "RIGHT";
+                Shields[0].SetActive(false);
+                Shields[1].SetActive(false);
+                Shields[2].SetActive(true);
+                Shields[3].SetActive(false);
+            }
+            else if (primaryTouchpad.x < -0.2f)
+            {
+                Debug.Log("Left");
+                textTest.text = "LEFT";
+                Shields[0].SetActive(false);
+                Shields[1].SetActive(false);
+                Shields[2].SetActive(false);
+                Shields[3].SetActive(true);
+            }
+            else
+            {
+                textTest.text = OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.Active).ToString();
+            }
         }
-        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickRight) || 
-            Input.GetKeyDown("d")) //Blue Shield Activation
-        {
-            Shields[0].SetActive(false);
-            Shields[1].SetActive(false);
-            Shields[2].SetActive(false);
-            Shields[3].SetActive(true);
-        }
 
-        Debug.Log("update is working");
+        Debug.Log(primaryTouchpad);
 
-        // textTest.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
-        textTest.text = OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.Active).ToString();
+        //textTest.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
+        
 
-        if (OVRInput.Get(OVRInput.Button.Any) || OVRInput.GetDown(OVRInput.Touch.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || OVRInput.GetDown(OVRInput.Touch.SecondaryThumbstick) || OVRInput.GetDown(OVRInput.Touch.SecondaryTouchpad))
+        /*if (OVRInput.Get(OVRInput.Button.Any) || OVRInput.GetDown(OVRInput.Touch.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || OVRInput.GetDown(OVRInput.Touch.SecondaryThumbstick) || OVRInput.GetDown(OVRInput.Touch.SecondaryTouchpad))
         {
             Debug.Log("is working");
             Shields[0].SetActive(false);
             Shields[1].SetActive(false);
             Shields[2].SetActive(false);
             Shields[3].SetActive(false);
-        }
+        }*/
+
         if (Input.GetKeyDown("x"))
         {
             if (charge == 100)
