@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{A068A8F8-CAF2-BE4A-628C-FE8F20E4D485}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR", "Oculus.VR.csproj", "{1A13F291-3F7E-816C-510D-D0C101F82F52}"
@@ -11,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR.Scripts.Editor", "Oculus.VR.Scripts.Editor.csproj", "{F44761E6-5F1E-66C5-2348-4EBC03DE2081}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR.Editor", "Oculus.VR.Editor.csproj", "{9118B019-1FEF-914B-7CA9-E544A3C6DF5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR.Editor", "Oculus.VR.Editor.csproj", "{E82BFFFA-055C-EABB-9B1D-61282447C246}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,15 +33,12 @@ Global
 		{F44761E6-5F1E-66C5-2348-4EBC03DE2081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F44761E6-5F1E-66C5-2348-4EBC03DE2081}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F44761E6-5F1E-66C5-2348-4EBC03DE2081}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9118B019-1FEF-914B-7CA9-E544A3C6DF5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9118B019-1FEF-914B-7CA9-E544A3C6DF5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9118B019-1FEF-914B-7CA9-E544A3C6DF5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9118B019-1FEF-914B-7CA9-E544A3C6DF5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82BFFFA-055C-EABB-9B1D-61282447C246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82BFFFA-055C-EABB-9B1D-61282447C246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82BFFFA-055C-EABB-9B1D-61282447C246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82BFFFA-055C-EABB-9B1D-61282447C246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {18200097-120A-4E9D-AF25-9459B1E2C986}
 	EndGlobalSection
 EndGlobal
