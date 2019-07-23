@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &825654009343327791
 Transform:
   m_ObjectHideFlags: 0
@@ -106,10 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734a96f78a39c034aa375adca0e096ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charge: 0
   targetType: 2
-  myShot: {fileID: 1038340888776229881, guid: e00c941e24ee4d341ae2b68f63d443ba, type: 3}
-  chargeText: {fileID: 0}
 --- !u!54 &4716769040124198450
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class TestDeviceLogic : MonoBehaviour
     public int charge;
     public GameObject myShot;
     public Text chargeText;
+    public Transform chargeUI;
 
     public static UnityAction<bool> onHasController = null;
 
@@ -41,64 +42,58 @@ public class TestDeviceLogic : MonoBehaviour
     }
 
     // HACK
-    public TextMesh textTest;
+    //public TextMesh textTest;
 
 
     void Update()
     {
-        /*if (!inputActive)
-        {
-            textTest.text = "FAILED";
-            return;
-        }*/
+        chargeUI = this.gameObject.transform.GetChild(0);
 
         hasController = CheckForController(hasController);
 
+        if (Input.GetKeyDown(KeyCode.W)) //Red Shield Activation
+        {
+            //if (onTriggerDown != null)
+            //{    
+            //    Shields[0].SetActive(true);
+            //    Shields[1].SetActive(false);
+            //    Shields[2].SetActive(false);
+            //    Shields[3].SetActive(false);
+            //}
 
-        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickUp) ||            
-        //    Input.GetKeyDown("w")) //Red Shield Activation
-        //{
-        //    if (onTriggerDown != null)
-        //        onTriggerDown();
+            //if (Input.GetKeyDown(KeyCode.A))   //Green Shield Activation
+            //{
+            //    Shields[0].SetActive(false);
+            //    Shields[1].SetActive(true);
+            //    Shields[2].SetActive(false);
+            //    Shields[3].SetActive(false);
+            //}
 
-        //    Shields[0].SetActive(true);
-        //    Shields[1].SetActive(false);
-        //    Shields[2].SetActive(false);
-        //    Shields[3].SetActive(false);
-        //}
-        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || 
-        //    Input.GetKeyDown("a")) //Green Shield Activation
-        //{
-        //    Shields[0].SetActive(false);
-        //    Shields[1].SetActive(true);
-        //    Shields[2].SetActive(false);
-        //    Shields[3].SetActive(false);
-        //}
-        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickLeft) || 
-        //    Input.GetKeyDown("s")) //Yellow Shield Activation
-        //{
-        //    Shields[0].SetActive(false);
-        //    Shields[1].SetActive(false);
-        //    Shields[2].SetActive(true);
-        //    Shields[3].SetActive(false);
-        //}
-        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickRight) || 
-        //    Input.GetKeyDown("d")) //Blue Shield Activation
-        //{
-        //    Shields[0].SetActive(false);
-        //    Shields[1].SetActive(false);
-        //    Shields[2].SetActive(false);
-        //    Shields[3].SetActive(true);
-        //}
+            //if (Input.GetKeyDown(KeyCode.S)) //Yellow Shield Activation
+            //{
+            //    Shields[0].SetActive(false);
+            //    Shields[1].SetActive(false);
+            //    Shields[2].SetActive(true);
+            //    Shields[3].SetActive(false);
+            //}
 
-        Debug.Log("update is working");
+            //if (Input.GetKeyDown(KeyCode.D)) //Blue Shield Activation
+            //{
+            //    Shields[0].SetActive(false);
+            //    Shields[1].SetActive(false);
+            //    Shields[2].SetActive(false);
+            //    Shields[3].SetActive(true);
+            //}
+        }
+
+        //Debug.Log("update is working");
 
         Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
 
         if (primaryTouchpad.y > 0.2f)
         {
             Debug.Log("Top");
-            textTest.text = "TOP";
+            chargeText.text = "TOP";
             Shields[0].SetActive(true);
             Shields[1].SetActive(false);
             Shields[2].SetActive(false);
@@ -108,7 +103,7 @@ public class TestDeviceLogic : MonoBehaviour
         else if (primaryTouchpad.y < -0.2f)
         {
             Debug.Log("Bottom");
-            textTest.text = "BOTTOM";
+            chargeText.text = "BOTTOM";
             Shields[0].SetActive(false);
             Shields[1].SetActive(true);
             Shields[2].SetActive(false);
@@ -119,7 +114,7 @@ public class TestDeviceLogic : MonoBehaviour
             if (primaryTouchpad.x > 0.2f)
             {
                 Debug.Log("Right");
-                textTest.text = "RIGHT";
+                chargeText.text = "RIGHT";
                 Shields[0].SetActive(false);
                 Shields[1].SetActive(false);
                 Shields[2].SetActive(true);
@@ -128,7 +123,7 @@ public class TestDeviceLogic : MonoBehaviour
             else if (primaryTouchpad.x < -0.2f)
             {
                 Debug.Log("Left");
-                textTest.text = "LEFT";
+                chargeText.text = "LEFT";
                 Shields[0].SetActive(false);
                 Shields[1].SetActive(false);
                 Shields[2].SetActive(false);
@@ -136,14 +131,14 @@ public class TestDeviceLogic : MonoBehaviour
             }
             else
             {
-                textTest.text = OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.Active).ToString();
+                chargeText.text = OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.Active).ToString();
             }
         }
 
         Debug.Log(primaryTouchpad);
 
-        //textTest.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
-        
+        chargeText.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
+
 
         /*if (OVRInput.Get(OVRInput.Button.Any) || OVRInput.GetDown(OVRInput.Touch.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || OVRInput.GetDown(OVRInput.Touch.SecondaryThumbstick) || OVRInput.GetDown(OVRInput.Touch.SecondaryTouchpad))
         {
@@ -164,6 +159,32 @@ public class TestDeviceLogic : MonoBehaviour
         }
 
         chargeText.text = charge.ToString();
+
+        
+        //if (charge == 20)
+        //{
+        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+        //}
+        //if (charge == 40)
+        //{
+        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+        //}
+        //if (charge == 60)
+        //{
+        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+        //}
+        //if (charge == 80)
+        //{
+        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+        //}
+        //if (charge == 100)
+        //{
+        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
+        //}
+        //if (charge == 100)
+        //{
+        //    chargeUI.transform.localScale += new Vector3(0.0f, 0.0f, 0.0f);
+        //}
     }
 
     private bool CheckForController(bool currentValue)
@@ -180,17 +201,15 @@ public class TestDeviceLogic : MonoBehaviour
         return false;
     }
 
-    private void PlayerFound()
+    public void PlayerFound()
     {
         inputActive = true;
     }
 
-    private void PlayerLost()
+    public void PlayerLost()
     {
         inputActive = false;
     }
-
-
 
     public void GainCharge(int amount)
     {
