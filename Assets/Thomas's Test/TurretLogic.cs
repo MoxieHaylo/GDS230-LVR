@@ -12,12 +12,16 @@ public class TurretLogic : MonoBehaviour
     public bool isMoving;
     public float WaitTime = 1.0f;
     public bool run = false;
+    float speed;
+    BossStats myStats;
 
     // Start is called before the first frame update
     void Start()
     {
         isMoving = true;
         myCurrentWaypoint = 0;
+        myStats = GetComponentInParent<BossStats>();
+        speed = 0.15f;
         
     }
 
@@ -25,8 +29,27 @@ public class TurretLogic : MonoBehaviour
     void Update()
     {
         
+        if(myStats.health <= 80)
+        {
+            speed = 0.18f;
+        }
 
-       
+        if (myStats.health <= 60)
+        {
+            speed = 0.21f;
+        }
+
+        if (myStats.health <= 40)
+        {
+            speed = 0.24f;
+        }
+
+        if (myStats.health <= 20)
+        {
+            speed = 0.27f;
+        }
+
+
     }
 
     private void FixedUpdate()
@@ -49,7 +72,7 @@ public class TurretLogic : MonoBehaviour
 
     void MoveToWaypoint()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[myCurrentWaypoint].transform.position, 0.15f);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[myCurrentWaypoint].transform.position, speed);
 
         if (transform.position == waypoints[myCurrentWaypoint].transform.position)
         {

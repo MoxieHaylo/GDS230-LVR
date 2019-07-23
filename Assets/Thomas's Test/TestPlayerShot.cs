@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class TestPlayerShot : MonoBehaviour
 {
-    public GameObject myTarget;
+    GameObject myTarget;
+    
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        myTarget = GameObject.FindGameObjectWithTag("Boss");
     }
 
     // Update is called once per frame

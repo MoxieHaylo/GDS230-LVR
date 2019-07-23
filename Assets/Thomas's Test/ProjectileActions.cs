@@ -7,11 +7,13 @@ public class ProjectileActions : MonoBehaviour
 
     GameObject myTarget;
     public OrbType type;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         myTarget = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class ProjectileActions : MonoBehaviour
 
     private void FixedUpdate()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, myTarget.transform.position, 0.05f);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, myTarget.transform.position, 0.1f);
     }
 
     private void OnTriggerEnter(Collider coll)
