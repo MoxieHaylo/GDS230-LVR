@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TurretLogic : MonoBehaviour
 {
 
@@ -9,10 +10,12 @@ public class TurretLogic : MonoBehaviour
     int myCurrentWaypoint;
     private int nextWaypoint;
     public GameObject myProjectile;
+    public int fireChance;
     public bool isMoving;
     public float WaitTime = 1.0f;
     public bool run = false;
     float speed;
+
     BossStats myStats;
 
     // Start is called before the first frame update
@@ -93,6 +96,8 @@ public class TurretLogic : MonoBehaviour
     {
         run = true;
         yield return new WaitForSeconds(3);
+        fireChance = Random.Range(0, 1);
+        if (fireChance == 0)
         shootProjectile();
         yield return new WaitForSeconds(1);
         isMoving = true;
@@ -102,8 +107,11 @@ public class TurretLogic : MonoBehaviour
 
     void shootProjectile()
     {
-        GameObject newProjectile = Instantiate(myProjectile, this.transform.position, this.transform.rotation);
-
+        fireChance = Random.Range(0, 4);
+        if (fireChance == 0)
+        {
+            GameObject newProjectile = Instantiate(myProjectile, this.transform.position, this.transform.rotation);
+        }
        
     }
     

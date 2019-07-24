@@ -40,23 +40,14 @@ public class TestDeviceLogic : MonoBehaviour
         chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
 
-    private void OnDestroy()
-    {
-        OVRManager.HMDMounted -= PlayerFound;
-        OVRManager.HMDMounted -= PlayerLost;
-    }
-
-    // HACK
-    //public TextMesh textTest;
-
-
+    
     void Update()
     {
         chargeUI = this.gameObject.transform.GetChild(0);
 
         hasController = CheckForController(hasController);
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             currentShield += 1;
         }
