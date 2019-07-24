@@ -503,7 +503,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171828727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.39, y: 0.91, z: 16.791468}
+  m_LocalPosition: {x: -5.16, y: 2.23, z: 16.791468}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 339388976}
@@ -2196,6 +2196,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestShieldGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 8319042563566147639, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632853296037002176, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3806600083815660159, guid: f89032d94e38b6e4ea951eb73d98376d,
         type: 3}
       propertyPath: m_IsActive
@@ -2307,16 +2317,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1038340888776229881, guid: e00c941e24ee4d341ae2b68f63d443ba,
         type: 3}
-    - target: {fileID: 8319042563566147639, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5632853296037002176, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 267330578910753356, guid: f89032d94e38b6e4ea951eb73d98376d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f89032d94e38b6e4ea951eb73d98376d, type: 3}

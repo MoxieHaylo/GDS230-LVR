@@ -8,6 +8,7 @@ public class TestDeviceLogic : MonoBehaviour
 {
 
     public GameObject[] Shields;
+    public int currentShield;
     public int charge;
     public GameObject myShot;
     public Text chargeText;
@@ -33,6 +34,7 @@ public class TestDeviceLogic : MonoBehaviour
     void Start()
     {
         charge = 0;
+        currentShield = 1;
     }
 
     private void OnDestroy()
@@ -50,6 +52,11 @@ public class TestDeviceLogic : MonoBehaviour
         chargeUI = this.gameObject.transform.GetChild(0);
 
         hasController = CheckForController(hasController);
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            currentShield += 1;
+        }
 
         if (Input.GetKeyDown(KeyCode.W)) //Red Shield Activation
         {
@@ -90,49 +97,46 @@ public class TestDeviceLogic : MonoBehaviour
 
         Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
 
-        if (primaryTouchpad.y > 0.2f)
-        {
-            Debug.Log("Top");
-            chargeText.text = "TOP";
-            Shields[0].SetActive(true);
-            Shields[1].SetActive(false);
-            Shields[2].SetActive(false);
-            Shields[3].SetActive(false);
+        
 
-        }
-        else if (primaryTouchpad.y < -0.2f)
+        
+        switch (currentShield)
         {
-            Debug.Log("Bottom");
-            chargeText.text = "BOTTOM";
-            Shields[0].SetActive(false);
-            Shields[1].SetActive(true);
-            Shields[2].SetActive(false);
-            Shields[3].SetActive(false);
-        }
-        else
-        {
-            if (primaryTouchpad.x > 0.2f)
-            {
+            case 1:
+                Debug.Log("Top");
+                chargeText.text = "TOP";
+                Shields[0].SetActive(true);
+                Shields[1].SetActive(false);
+                Shields[2].SetActive(false);
+                Shields[3].SetActive(false);
+                break;
+            case 2:
+                Debug.Log("Bottom");
+                chargeText.text = "BOTTOM";
+                Shields[0].SetActive(false);
+                Shields[1].SetActive(true);
+                Shields[2].SetActive(false);
+                Shields[3].SetActive(false);
+                break;
+            case 3:
                 Debug.Log("Right");
                 chargeText.text = "RIGHT";
                 Shields[0].SetActive(false);
                 Shields[1].SetActive(false);
                 Shields[2].SetActive(true);
                 Shields[3].SetActive(false);
-            }
-            else if (primaryTouchpad.x < -0.2f)
-            {
+                break;
+            case 4:
                 Debug.Log("Left");
                 chargeText.text = "LEFT";
                 Shields[0].SetActive(false);
                 Shields[1].SetActive(false);
                 Shields[2].SetActive(false);
                 Shields[3].SetActive(true);
-            }
-            else
-            {
-                chargeText.text = OVRInput.Get(OVRInput.Button.One, OVRInput.Controller.Active).ToString();
-            }
+                break;
+            default:
+                currentShield = 1;
+                break;
         }
 
         Debug.Log(primaryTouchpad);

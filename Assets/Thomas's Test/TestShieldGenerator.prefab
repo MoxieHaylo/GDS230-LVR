@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shields: []
+  currentShield: 0
   charge: 0
   myShot: {fileID: 0}
   chargeText: {fileID: 0}
@@ -763,32 +764,32 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: 793728702298933274, guid: 60808675398ba0542aa0d92bdfb9f581,
+    - target: {fileID: 793728702093891441, guid: 60808675398ba0542aa0d92bdfb9f581,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 793728702298933274, guid: 60808675398ba0542aa0d92bdfb9f581,
+    - target: {fileID: 793728702093891441, guid: 60808675398ba0542aa0d92bdfb9f581,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 793728702298933274, guid: 60808675398ba0542aa0d92bdfb9f581,
+    - target: {fileID: 793728702093891441, guid: 60808675398ba0542aa0d92bdfb9f581,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 793728702093891441, guid: 60808675398ba0542aa0d92bdfb9f581,
+    - target: {fileID: 793728702298933274, guid: 60808675398ba0542aa0d92bdfb9f581,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 793728702093891441, guid: 60808675398ba0542aa0d92bdfb9f581,
+    - target: {fileID: 793728702298933274, guid: 60808675398ba0542aa0d92bdfb9f581,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 793728702093891441, guid: 60808675398ba0542aa0d92bdfb9f581,
+    - target: {fileID: 793728702298933274, guid: 60808675398ba0542aa0d92bdfb9f581,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
