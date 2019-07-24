@@ -149,13 +149,12 @@ public class TestDeviceLogic : MonoBehaviour
             Shields[3].SetActive(false);
         }*/
 
-        if (Input.GetKeyDown("x"))
+        if (charge == 100)
         {
-            if (charge == 100)
-            {
-                playerShoot();
-                charge = 0;
-            }
+            
+            playerShoot();
+            charge = 0;
+            
         }
 
         chargeText.text = charge.ToString();

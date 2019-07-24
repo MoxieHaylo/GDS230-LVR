@@ -31,7 +31,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.487097, y: 3.9980729, z: 67.24}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
+  m_Children:
+  - {fileID: 2442769927886562762}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a5e79b1d93884a949a6283b32f07ac3d, type: 2}
+  - {fileID: 2100000, guid: a29b5b8da2ce8e34e973f0b0c3a52407, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122,3 +123,88 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &8062318844649536352
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2534397104922779312}
+    m_Modifications:
+    - target: {fileID: 5622016307112877719, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System Magical
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877717, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5622016307112877717, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9728cc596c08bde4abab462b993a2875, type: 3}
+--- !u!4 &2442769927886562762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
+    type: 3}
+  m_PrefabInstance: {fileID: 8062318844649536352}
+  m_PrefabAsset: {fileID: 0}
