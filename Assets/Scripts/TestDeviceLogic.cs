@@ -13,6 +13,7 @@ public class TestDeviceLogic : MonoBehaviour
     public GameObject myShot;
     public Text chargeText;
     public Transform chargeUI;
+    public float uiScale = 0f;
 
     public static UnityAction<bool> onHasController = null;
 
@@ -35,6 +36,8 @@ public class TestDeviceLogic : MonoBehaviour
     {
         charge = 0;
         currentShield = 1;
+
+        chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
 
     private void OnDestroy()
@@ -143,51 +146,18 @@ public class TestDeviceLogic : MonoBehaviour
 
         chargeText.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
 
-
-        /*if (OVRInput.Get(OVRInput.Button.Any) || OVRInput.GetDown(OVRInput.Touch.PrimaryIndexTrigger) || OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown) || OVRInput.GetDown(OVRInput.Touch.SecondaryThumbstick) || OVRInput.GetDown(OVRInput.Touch.SecondaryTouchpad))
-        {
-            Debug.Log("is working");
-            Shields[0].SetActive(false);
-            Shields[1].SetActive(false);
-            Shields[2].SetActive(false);
-            Shields[3].SetActive(false);
-        }*/
-
         if (charge == 100)
         {
             
             playerShoot();
             charge = 0;
-            
+
+            chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
         }
 
         chargeText.text = charge.ToString();
-
         
-        //if (charge == 20)
-        //{
-        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
-        //}
-        //if (charge == 40)
-        //{
-        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
-        //}
-        //if (charge == 60)
-        //{
-        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
-        //}
-        //if (charge == 80)
-        //{
-        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
-        //}
-        //if (charge == 100)
-        //{
-        //    chargeUI.transform.localScale += new Vector3(0.25f, 0.25f, 0.25f);
-        //}
-        //if (charge == 100)
-        //{
-        //    chargeUI.transform.localScale += new Vector3(0.0f, 0.0f, 0.0f);
-        //}
+       
     }
 
     private bool CheckForController(bool currentValue)
@@ -222,6 +192,8 @@ public class TestDeviceLogic : MonoBehaviour
         {
             charge = 100;
         }
+
+        chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
 
     public void LoseCharge(int amount)
@@ -232,7 +204,11 @@ public class TestDeviceLogic : MonoBehaviour
         {
             charge = 0;
         }
+
+        chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
+
+    
 
     public void playerShoot()
     {
