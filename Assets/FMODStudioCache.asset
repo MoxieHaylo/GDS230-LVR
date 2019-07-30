@@ -13,14 +13,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114618492918969172}
-  - {fileID: 114215618359093506}
+  - {fileID: 114770806758244868}
+  - {fileID: 114579135615710048}
   EditorEvents: []
-  MasterBankRef: {fileID: 114215618359093506}
-  StringsBankRef: {fileID: 114618492918969172}
-  stringsBankWriteTime: 636997385281717552
-  cacheVersion: 2
---- !u!114 &114129398160876006
+  MasterBanks:
+  - {fileID: 114579135615710048}
+  StringsBanks:
+  - {fileID: 114770806758244868}
+  stringsBankWriteTime: 637000845944217758
+  cacheVersion: 3
+--- !u!114 &114579135615710048
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,35 +34,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: C:\Users\user\Documents\GDS230-LVR\Assets\Editor Default Resources\ReEnergise
-    FMOD Soundtrack\Build\Desktop\Master Bank.bank
-  lastModified: 636996900548272296
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 12474
-  Exists: 0
---- !u!114 &114215618359093506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Path: C:\Users\hwilson12\Documents\GDS230-LVR\Assets\Editor Default Resources\ReEnergise
-    FMOD Soundtrack\Build\Desktop\Master Bank.bank
-  lastModified: 636997385281717552
+  Path: C:\Users\tnewman6\Documents\GDS230-LVR\Assets\Soundtrack\Re-Energise Soundtrack\Build\Desktop\Master
+    Bank.bank
+  lastModified: 637000845944117034
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 12474
   Exists: 1
---- !u!114 &114618492918969172
+--- !u!114 &114770806758244868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,9 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: Assets\Editor Default Resources\ReEnergise FMOD Soundtrack\Build\Desktop\Master
-    Bank.strings.bank
-  lastModified: 636997385281717552
+  Path: Assets\Soundtrack\Re-Energise Soundtrack\Build\Desktop\Master Bank.strings.bank
+  lastModified: 637000845944217758
   LoadResult: 0
   FileSizes:
   - Name: Desktop

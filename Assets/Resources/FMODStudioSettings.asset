@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\Editor Default Resources\ReEnergise FMOD Soundtrack\ReEnergise
-    FMOD Soundtrack.fspro
-  SourceProjectPathUnformatted: Assets\Editor Default Resources\ReEnergise FMOD Soundtrack\ReEnergise
-    FMOD Soundtrack.fspro
-  SourceBankPathUnformatted: Assets\Editor Default Resources\ReEnergise FMOD Soundtrack\Build
+  sourceProjectPath: Assets\Soundtrack\Re-Energise Soundtrack\Re-Energise Soundtrack.fspro
+  SourceProjectPathUnformatted: Assets\Soundtrack\Re-Energise Soundtrack\Re-Energise
+    Soundtrack.fspro
+  SourceBankPathUnformatted: Assets\Soundtrack\Re-Energise Soundtrack\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -61,5 +60,7 @@ MonoBehaviour:
   - Platform: 2
     Value: 32
   Plugins: []
-  MasterBank: Master Bank
+  MasterBanks:
+  - Master Bank
   Banks: []
+  LiveUpdatePort: 9264
