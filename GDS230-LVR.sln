@@ -5,7 +5,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR", "Oculus.VR.csproj", "{1A13F291-3F7E-816C-510D-D0C101F82F52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{65C49281-6A4C-F23C-B5AF-AD3DE748B415}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{67D65D54-0A83-5873-25BB-C12C0140A2A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{CAA41A27-036D-6B54-C882-78E20B494A69}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oculus.VR.Scripts.Editor", "Oculus.VR.Scripts.Editor.csproj", "{F44761E6-5F1E-66C5-2348-4EBC03DE2081}"
 EndProject
@@ -25,10 +29,18 @@ Global
 		{1A13F291-3F7E-816C-510D-D0C101F82F52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A13F291-3F7E-816C-510D-D0C101F82F52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A13F291-3F7E-816C-510D-D0C101F82F52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C49281-6A4C-F23C-B5AF-AD3DE748B415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C49281-6A4C-F23C-B5AF-AD3DE748B415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C49281-6A4C-F23C-B5AF-AD3DE748B415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C49281-6A4C-F23C-B5AF-AD3DE748B415}.Release|Any CPU.Build.0 = Release|Any CPU
 		{67D65D54-0A83-5873-25BB-C12C0140A2A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{67D65D54-0A83-5873-25BB-C12C0140A2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67D65D54-0A83-5873-25BB-C12C0140A2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67D65D54-0A83-5873-25BB-C12C0140A2A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA41A27-036D-6B54-C882-78E20B494A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA41A27-036D-6B54-C882-78E20B494A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA41A27-036D-6B54-C882-78E20B494A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA41A27-036D-6B54-C882-78E20B494A69}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F44761E6-5F1E-66C5-2348-4EBC03DE2081}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F44761E6-5F1E-66C5-2348-4EBC03DE2081}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F44761E6-5F1E-66C5-2348-4EBC03DE2081}.Release|Any CPU.ActiveCfg = Release|Any CPU
