@@ -50,6 +50,7 @@ public class TestDeviceLogic : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             shieldIndex++;
+            SwapShield();
         }
 
         if (Input.GetKeyDown(KeyCode.X))
