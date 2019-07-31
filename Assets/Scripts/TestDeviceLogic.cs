@@ -8,10 +8,10 @@ public class TestDeviceLogic : MonoBehaviour
 {
 
     public GameObject[] Shields;
-    public int currentShield;
+    public int shieldIndex;
     public int charge;
     public GameObject myShot;
-    public Text chargeText;
+    
     public Transform chargeUI;
     public float uiScale = 0f;
 
@@ -35,7 +35,7 @@ public class TestDeviceLogic : MonoBehaviour
     void Start()
     {
         charge = 0;
-        currentShield = 1;
+        shieldIndex = 0;
 
         chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
@@ -49,93 +49,27 @@ public class TestDeviceLogic : MonoBehaviour
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
-            currentShield += 1;
+            shieldIndex++;
         }
 
-        if (Input.GetKeyDown(KeyCode.W)) //Red Shield Activation
+        if (Input.GetKeyDown(KeyCode.X))
         {
-            //if (onTriggerDown != null)
-            //{    
-            //    Shields[0].SetActive(true);
-            //    Shields[1].SetActive(false);
-            //    Shields[2].SetActive(false);
-            //    Shields[3].SetActive(false);
-            //}
+            shieldIndex++;
+            SwapShield();
 
-            //if (Input.GetKeyDown(KeyCode.A))   //Green Shield Activation
-            //{
-            //    Shields[0].SetActive(false);
-            //    Shields[1].SetActive(true);
-            //    Shields[2].SetActive(false);
-            //    Shields[3].SetActive(false);
-            //}
-
-            //if (Input.GetKeyDown(KeyCode.S)) //Yellow Shield Activation
-            //{
-            //    Shields[0].SetActive(false);
-            //    Shields[1].SetActive(false);
-            //    Shields[2].SetActive(true);
-            //    Shields[3].SetActive(false);
-            //}
-
-            //if (Input.GetKeyDown(KeyCode.D)) //Blue Shield Activation
-            //{
-            //    Shields[0].SetActive(false);
-            //    Shields[1].SetActive(false);
-            //    Shields[2].SetActive(false);
-            //    Shields[3].SetActive(true);
-            //}
+            
         }
 
-        //Debug.Log("update is working");
+       
 
         Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
 
         
 
         
-        switch (currentShield)
-        {
-            case 1:
-                Debug.Log("Top");
-                chargeText.text = "TOP";
-                Shields[0].SetActive(true);
-                Shields[1].SetActive(false);
-                Shields[2].SetActive(false);
-                Shields[3].SetActive(false);
-                break;
-            case 2:
-                Debug.Log("Bottom");
-                chargeText.text = "BOTTOM";
-                Shields[0].SetActive(false);
-                Shields[1].SetActive(true);
-                Shields[2].SetActive(false);
-                Shields[3].SetActive(false);
-                break;
-            case 3:
-                Debug.Log("Right");
-                chargeText.text = "RIGHT";
-                Shields[0].SetActive(false);
-                Shields[1].SetActive(false);
-                Shields[2].SetActive(true);
-                Shields[3].SetActive(false);
-                break;
-            case 4:
-                Debug.Log("Left");
-                chargeText.text = "LEFT";
-                Shields[0].SetActive(false);
-                Shields[1].SetActive(false);
-                Shields[2].SetActive(false);
-                Shields[3].SetActive(true);
-                break;
-            default:
-                currentShield = 1;
-                break;
-        }
+        
 
-        Debug.Log(primaryTouchpad);
-
-        chargeText.text = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad).ToString();
+        
 
         if (charge == 100)
         {
@@ -146,7 +80,7 @@ public class TestDeviceLogic : MonoBehaviour
             chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
         }
 
-        chargeText.text = charge.ToString();
+        
         
        
     }
@@ -163,6 +97,23 @@ public class TestDeviceLogic : MonoBehaviour
             onHasController(controllerCheck);
 
         return false;
+    }
+
+    public void SwapShield()
+    {
+        if (shieldIndex >= 4)
+        {
+            shieldIndex = 0;
+        }
+
+        Shields[0].SetActive(false);
+        Shields[1].SetActive(false);
+        Shields[2].SetActive(false);
+        Shields[3].SetActive(false);
+        Shields[shieldIndex].SetActive(true);
+
+       
+
     }
 
     public void PlayerFound()

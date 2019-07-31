@@ -42,27 +42,7 @@ public class TestShieldLogic : MonoBehaviour
                 Destroy(coll.gameObject);
             }
         }
-        /*if (coll.gameObject == targetOrb)
-        {
-
-            GainCharge(20);
-            Destroy(coll.gameObject);
-        }
-        if (coll.gameObject == wrongOrbs[0])
-        {
-            LoseCharge(-20);
-            Destroy(coll.gameObject);
-        }
-        if (coll.gameObject == wrongOrbs[1])
-        {
-            LoseCharge(-20);
-            Destroy(coll.gameObject);
-        }
-        if (coll.gameObject == wrongOrbs[2])
-        {
-            LoseCharge(-20);
-            Destroy(coll.gameObject);
-        }*/
+        
 
         
     }

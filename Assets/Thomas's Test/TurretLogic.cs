@@ -15,6 +15,7 @@ public class TurretLogic : MonoBehaviour
     public float WaitTime = 1.0f;
     public bool run = false;
     float speed;
+    public Transform myTarget;
 
     BossStats myStats;
 
@@ -26,12 +27,17 @@ public class TurretLogic : MonoBehaviour
         myStats = GetComponentInParent<BossStats>();
         speed = 0.15f;
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        Vector3 direction = myTarget.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        transform.rotation = rotation;
+
         if(myStats.health <= 80)
         {
             speed = 0.18f;
@@ -96,10 +102,12 @@ public class TurretLogic : MonoBehaviour
     {
         run = true;
         yield return new WaitForSeconds(3);
-        fireChance = Random.Range(0, 1);
+        fireChance = 0;
+        //fireChance = Random.Range(0, 1);
         if (fireChance == 0)
         shootProjectile();
-        yield return new WaitForSeconds(1);
+        int delayTime = Random.Range(1, 3);
+        yield return new WaitForSeconds(delayTime);
         isMoving = true;
     }
    
@@ -107,7 +115,7 @@ public class TurretLogic : MonoBehaviour
 
     void shootProjectile()
     {
-        fireChance = Random.Range(0, 4);
+        //fireChance = Random.Range(0, 4);
         if (fireChance == 0)
         {
             GameObject newProjectile = Instantiate(myProjectile, this.transform.position, this.transform.rotation);
