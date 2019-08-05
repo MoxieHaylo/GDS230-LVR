@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class TestDeviceLogic : MonoBehaviour
 {
-
     public GameObject[] Shields;
     public int shieldIndex;
     public int charge;
@@ -39,7 +38,6 @@ public class TestDeviceLogic : MonoBehaviour
 
         chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
-
     
     void Update()
     {
@@ -57,33 +55,21 @@ public class TestDeviceLogic : MonoBehaviour
         {
             shieldIndex++;
             SwapShield();
-
-            
         }
 
-       
-
-        Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
-
-        
-
-        
-        
-
-        
+        //Vector2 primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
+        //left tap = 0
+        //right tap = 1;
+        //up tap = 2;
+        //down tap = 3;
 
         if (charge == 100)
         {
-            
             playerShoot();
             charge = 0;
 
             chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
         }
-
-        
-        
-       
     }
 
     private bool CheckForController(bool currentValue)
@@ -100,7 +86,7 @@ public class TestDeviceLogic : MonoBehaviour
         return false;
     }
 
-    public void SwapShield()
+    void SwapShield()
     {
         if (shieldIndex >= 4)
         {
@@ -112,9 +98,17 @@ public class TestDeviceLogic : MonoBehaviour
         Shields[2].SetActive(false);
         Shields[3].SetActive(false);
         Shields[shieldIndex].SetActive(true);
+    }
 
-       
+    void SwapShield(int index)
+    {
+        Shields[0].SetActive(false);
+        Shields[1].SetActive(false);
+        Shields[2].SetActive(false);
+        Shields[3].SetActive(false);
+        Shields[index].SetActive(true);
 
+        shieldIndex = index;
     }
 
     public void PlayerFound()
@@ -151,11 +145,8 @@ public class TestDeviceLogic : MonoBehaviour
         chargeUI.transform.localScale = new Vector3(charge * uiScale, charge * uiScale, charge * uiScale);
     }
 
-    
-
     public void playerShoot()
     {
         GameObject newShot = Instantiate(myShot, this.transform.position, this.transform.rotation);
     }
-
 }

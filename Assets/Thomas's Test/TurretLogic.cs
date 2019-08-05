@@ -16,6 +16,7 @@ public class TurretLogic : MonoBehaviour
     public bool run = false;
     float speed;
     public Transform myTarget;
+    private Animator animator;
 
     BossStats myStats;
 
@@ -26,8 +27,8 @@ public class TurretLogic : MonoBehaviour
         myCurrentWaypoint = 0;
         myStats = GetComponentInParent<BossStats>();
         speed = 0.15f;
-        
 
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -65,6 +66,7 @@ public class TurretLogic : MonoBehaviour
     {
         if (isMoving)
         {
+            animator.SetBool("isMoving", true);
             run = false;
             MoveToWaypoint();
         }
@@ -73,7 +75,8 @@ public class TurretLogic : MonoBehaviour
 
         if(isMoving == false)
         {
-            if(!run)
+            animator.SetBool("isMoving", false);
+            if (!run)
             StartCoroutine(Fire());
             //shootProjectile();
         }
@@ -86,14 +89,18 @@ public class TurretLogic : MonoBehaviour
         if (transform.position == waypoints[myCurrentWaypoint].transform.position)
         {
             isMoving = false;
-            nextWaypoint = Random.Range(0, waypoints.Length);
+            nextWaypoint = Random.Range(1, waypoints.Length);
 
-            if (nextWaypoint == myCurrentWaypoint)
+            /*if (nextWaypoint == myCurrentWaypoint)
             {
                 nextWaypoint = Random.Range(0, waypoints.Length);
-            }
+            }*/
 
             myCurrentWaypoint = nextWaypoint;
+
+            GameObject t = waypoints[myCurrentWaypoint];
+            waypoints[myCurrentWaypoint] = waypoints[0];
+            waypoints[0] = t;
         }
 
     }
