@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossBehaviour : ColourBase
 {
-    public int health;
+    public int health; // not used
     public TurretPool[] turret;
     [SerializeField] private GameObject player;
     int i = 0;

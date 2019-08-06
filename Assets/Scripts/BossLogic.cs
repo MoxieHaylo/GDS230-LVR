@@ -7,6 +7,13 @@ public class BossLogic : MonoBehaviour
 {
     public int health;
     public GameObject[] Turrets;
+    public GameObject DoorWinOpen;//using this to lerp the door open when the bosses health reaches 0
+    public Transform Open;// waypoint for open door position.
+    public Transform Closed;//waypoint for closed door position.
+    public float OpeningSpeed = 1f;//speed at which the door opens.
+    private float speed = 0;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +34,11 @@ public class BossLogic : MonoBehaviour
             Turrets[1].SetActive(true);
         }
 
+        if (health == 0)
+        {
+            speed += Time.deltaTime * OpeningSpeed;
+            DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
+        }
 
     }
 
