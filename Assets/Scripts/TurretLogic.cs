@@ -14,20 +14,21 @@ public class TurretLogic : MonoBehaviour
     public bool isMoving;
     public float WaitTime = 1.0f;
     public bool run = false;
+    private ParticleSystem chargeUpParticle;
     float speed;
     public Transform myTarget;
     private Animator animator;
 
-    BossStats myStats;
+    BossLogic myStats;
 
     // Start is called before the first frame update
     void Start()
     {
         isMoving = true;
         myCurrentWaypoint = 0;
-        myStats = GetComponentInParent<BossStats>();
+        myStats = GetComponentInParent<BossLogic>();
         speed = 0.15f;
-
+        chargeUpParticle = GetComponentInChildren<ParticleSystem>();
         animator = GetComponentInChildren<Animator>();
     }
 
@@ -108,6 +109,7 @@ public class TurretLogic : MonoBehaviour
     public IEnumerator Fire()
     {
         run = true;
+        chargeUpParticle.Emit(1);
         yield return new WaitForSeconds(3);
         fireChance = 0;
         //fireChance = Random.Range(0, 1);

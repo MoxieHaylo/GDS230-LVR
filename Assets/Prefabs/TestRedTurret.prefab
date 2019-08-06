@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6198226734000610239}
   - component: {fileID: 6198226734000610238}
   - component: {fileID: 6198226734000610237}
-  - component: {fileID: 6198226734000610224}
+  - component: {fileID: 8633286976770354321}
   m_Layer: 0
   m_Name: TestRedTurret
   m_TagString: Untagged
@@ -93,7 +93,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6198226734000610224
+--- !u!114 &8633286976770354321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6198226734000610235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8e2a7242f501eb4386a2c4c493d51ef, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e571b6d3be316947bc35ff9e8263cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
@@ -115,6 +115,7 @@ MonoBehaviour:
   isMoving: 0
   WaitTime: 1
   run: 0
+  chargeUpParticle: {fileID: 0}
   myTarget: {fileID: 0}
 --- !u!1001 &2469400727338869422
 PrefabInstance:
@@ -183,6 +184,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1826141550722206060, guid: 4d0a370cfea76004b80afff00837f817,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b9e74f4e9e3d81c47a7682120ee4d15e, type: 2}
     - target: {fileID: 1826141550601853302, guid: 4d0a370cfea76004b80afff00837f817,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -203,21 +209,16 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.4509804
       objectReference: {fileID: 0}
-    - target: {fileID: 1826141550729700462, guid: 4d0a370cfea76004b80afff00837f817,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 75d4216cec693cd4fa7e82ef3c082e24, type: 2}
     - target: {fileID: 1826141550729700460, guid: 4d0a370cfea76004b80afff00837f817,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 75d4216cec693cd4fa7e82ef3c082e24, type: 2}
-    - target: {fileID: 1826141550722206060, guid: 4d0a370cfea76004b80afff00837f817,
+    - target: {fileID: 1826141550729700462, guid: 4d0a370cfea76004b80afff00837f817,
         type: 3}
-      propertyPath: m_Controller
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 9100000, guid: b9e74f4e9e3d81c47a7682120ee4d15e, type: 2}
+      objectReference: {fileID: 2100000, guid: 75d4216cec693cd4fa7e82ef3c082e24, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d0a370cfea76004b80afff00837f817, type: 3}
 --- !u!4 &4256694328671978530 stripped

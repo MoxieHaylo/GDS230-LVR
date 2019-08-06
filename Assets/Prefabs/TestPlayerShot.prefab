@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1038340888776229881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 32.05, y: 0.93, z: 65.31}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 7016685960302738900}
   m_Father: {fileID: 0}
@@ -187,6 +187,106 @@ PrefabInstance:
     - target: {fileID: 1684709664255356300, guid: d5aa3a368aafcc049bf3935c741d1070,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053884093862755929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.61929
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053884093862755929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.61929
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053884093862755929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.61929
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053884093862755929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053884093862755929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00000029802
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674929, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709664172153555, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709664172153555, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709664172153555, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: VelocityModule.x.scalar
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: VelocityModule.y.scalar
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: VelocityModule.z.scalar
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: VelocityModule.x.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: VelocityModule.y.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662419674931, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: VelocityModule.z.minScalar
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662535327648, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709662535327648, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: InitialModule.startRotation.scalar
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

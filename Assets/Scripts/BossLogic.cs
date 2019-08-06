@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BossStats : MonoBehaviour
+public class BossLogic : MonoBehaviour
 {
     public int health;
     public GameObject[] Turrets;
@@ -27,7 +27,7 @@ public class BossStats : MonoBehaviour
             Turrets[1].SetActive(true);
         }
 
-     
+
     }
 
     public void ChangeHealth(int amount)
@@ -44,5 +44,4 @@ public class BossStats : MonoBehaviour
 
     }
 }
-
 
