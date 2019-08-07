@@ -25,7 +25,11 @@ public class BossLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health == 0)
+        {
+            speed += Time.deltaTime * OpeningSpeed;
+            DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
+        }
 
     }
 
@@ -44,11 +48,7 @@ public class BossLogic : MonoBehaviour
             turretManager.activeTurrets.Add(Turrets[1]);
         }
 
-        if (health == 0)
-        {
-            speed += Time.deltaTime * OpeningSpeed;
-            DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider coll)
