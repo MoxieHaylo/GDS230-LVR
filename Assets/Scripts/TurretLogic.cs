@@ -7,6 +7,8 @@ public class TurretLogic : MonoBehaviour
 {
 
     public GameObject[] waypoints;
+
+    
     int myCurrentWaypoint;
     private int nextWaypoint;
     public GameObject myProjectile;
@@ -18,12 +20,18 @@ public class TurretLogic : MonoBehaviour
     float speed;
     public Transform myTarget;
     private Animator animator;
-
+    public int turretNumber;
+    public TurretManager turretManager;
     BossLogic myStats;
+
+    
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        
         isMoving = true;
         myCurrentWaypoint = 0;
         myStats = GetComponentInParent<BossLogic>();
@@ -78,7 +86,10 @@ public class TurretLogic : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
             if (!run)
-            StartCoroutine(Fire());
+            {
+
+            }
+                //Shoot();
             //shootProjectile();
         }
     }
@@ -108,18 +119,30 @@ public class TurretLogic : MonoBehaviour
 
     public IEnumerator Fire()
     {
-        run = true;
-        chargeUpParticle.Emit(1);
-        yield return new WaitForSeconds(3);
-        fireChance = 0;
-        //fireChance = Random.Range(0, 1);
-        if (fireChance == 0)
-        shootProjectile();
-        int delayTime = Random.Range(1, 3);
-        yield return new WaitForSeconds(delayTime);
-        isMoving = true;
+        if(turretNumber == turretManager.nextTurretToFire)
+        {
+            //animator.SetBool("isMoving", false);
+
+            run = true;
+            //chargeUpParticle.Emit(1);
+            yield return new WaitForSeconds(3);
+            fireChance = 0;
+            //fireChance = Random.Range(0, 1);
+            if (fireChance == 0)
+                shootProjectile();
+            int delayTime = Random.Range(1, 3);
+            yield return new WaitForSeconds(delayTime);
+
+            isMoving = true;
+            //MoveToWaypoint();
+        }
+
+
+
+
+
     }
-   
+
 
 
     void shootProjectile()
@@ -132,4 +155,7 @@ public class TurretLogic : MonoBehaviour
        
     }
     
+
+
+
 }

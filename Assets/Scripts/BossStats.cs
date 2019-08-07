@@ -7,11 +7,13 @@ public class BossStats : MonoBehaviour
 {
     public int health;
     public GameObject[] Turrets;
+    public TurretManager logic;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 100;
+        logic = GetComponent<TurretManager>();
     }
 
     // Update is called once per frame
@@ -20,11 +22,14 @@ public class BossStats : MonoBehaviour
         if (health == 80)
         {
             Turrets[0].SetActive(true);
+            
+            logic.activeTurrets.Add(Turrets[0]);
         }
 
         if (health == 40)
         {
-            Turrets[1].SetActive(true);
+            Turrets[1].SetActive(true);            
+            logic.activeTurrets.Add(Turrets[1]);
         }
 
      
