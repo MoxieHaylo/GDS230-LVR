@@ -10537,6 +10537,11 @@ PrefabInstance:
       propertyPath: OpeningSpeed
       value: 0.005
       objectReference: {fileID: 0}
+    - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: turretManager
+      value: 
+      objectReference: {fileID: 772048362}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad1706ce3f95084a8c6a5933d6807ae, type: 3}
 --- !u!1 &2082730914

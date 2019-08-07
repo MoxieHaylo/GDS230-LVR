@@ -12,6 +12,7 @@ public class BossLogic : MonoBehaviour
     public Transform Closed;//waypoint for closed door position.
     public float OpeningSpeed = 1f;//speed at which the door opens.
     private float speed = 0;
+    public TurretManager turretManager;
 
 
 
@@ -24,14 +25,23 @@ public class BossLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
+    }
+
+    public void ChangeHealth(int amount)
+    {
+        health = health + amount;
         if (health == 80)
         {
             Turrets[0].SetActive(true);
+            turretManager.activeTurrets.Add(Turrets[0]);
         }
 
         if (health == 40)
         {
             Turrets[1].SetActive(true);
+            turretManager.activeTurrets.Add(Turrets[1]);
         }
 
         if (health == 0)
@@ -39,12 +49,6 @@ public class BossLogic : MonoBehaviour
             speed += Time.deltaTime * OpeningSpeed;
             DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
         }
-
-    }
-
-    public void ChangeHealth(int amount)
-    {
-        health = health + amount;
     }
 
     private void OnTriggerEnter(Collider coll)
