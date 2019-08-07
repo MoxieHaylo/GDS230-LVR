@@ -24,6 +24,8 @@ public class TestDeviceLogic : MonoBehaviour
     private bool hasController = false;
     private bool inputActive = true;
 
+    Vector2 primaryTouchpad;
+
     private void Awake()
     {
         OVRManager.HMDMounted += PlayerFound;
@@ -48,6 +50,32 @@ public class TestDeviceLogic : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
             shieldIndex++;
+            SwapShield();
+        }
+
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
+        {
+            primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
+            if (primaryTouchpad.y > 0.2f)
+            {
+                shieldIndex = 3;
+            }
+            else if (primaryTouchpad.y > -0.2f)
+            {
+                shieldIndex = 1;
+            }
+            else
+            {
+                if (primaryTouchpad.x > 0.2f)
+                {
+                    shieldIndex = 0;
+                }
+                else if (primaryTouchpad.x > -0.2f)
+                {
+                    shieldIndex = 2;
+                }
+            }
+            print(primaryTouchpad);
             SwapShield();
         }
 
@@ -88,15 +116,21 @@ public class TestDeviceLogic : MonoBehaviour
 
     void SwapShield()
     {
+       
+        
+
         if (shieldIndex >= 4)
         {
             shieldIndex = 0;
         }
 
-        Shields[0].SetActive(false);
-        Shields[1].SetActive(false);
-        Shields[2].SetActive(false);
-        Shields[3].SetActive(false);
+        
+
+
+        Shields[0].SetActive(false);//r
+        Shields[1].SetActive(false);//g
+        Shields[2].SetActive(false);//y
+        Shields[3].SetActive(false);//b
         Shields[shieldIndex].SetActive(true);
     }
 
