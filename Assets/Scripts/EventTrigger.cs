@@ -5,9 +5,9 @@ using System;
 
 public class EventTrigger : MonoBehaviour
 {
-
     public delegate void ShootEvent();
     public static event ShootEvent OnHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,5 @@ public class EventTrigger : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         OnHit();
-        Debug.Log("Event thingo");
     }
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8568226516955786051}
   m_Layer: 0
   m_Name: TestGreenShot
-  m_TagString: Untagged
+  m_TagString: Orb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,11 +131,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2534397104922779312}
     m_Modifications:
-    - target: {fileID: 4021919235126325358, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
-        type: 3}
-      propertyPath: m_Name
-      value: Turret_Triangle
-      objectReference: {fileID: 0}
     - target: {fileID: 4021919235126325357, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -205,6 +200,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021919235126325358, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Turret_Triangle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef9f394f2efa0a24eb896d1f719cd8ba, type: 3}

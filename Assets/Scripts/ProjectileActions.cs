@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class ProjectileActions : MonoBehaviour
 {
-
     GameObject myTarget;
     public OrbType type;
     
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,14 +31,8 @@ public class ProjectileActions : MonoBehaviour
         if(coll.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
-        }
-        
-    }
-
-    
-    
-        
-    
+        }       
+    }   
 }
 
-public enum OrbType { Green, Red, Blue, Yellow}
+public enum OrbType { Green, Red, Blue, Yellow }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6970171262368800274}
   m_Layer: 0
   m_Name: TestRedShot
-  m_TagString: Untagged
+  m_TagString: Orb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,11 +216,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6678927612063203952}
     m_Modifications:
-    - target: {fileID: 7805016609789337297, guid: 5d5258b142093024ea3d626927e0c474,
-        type: 3}
-      propertyPath: m_Name
-      value: Turret_Diamond
-      objectReference: {fileID: 0}
     - target: {fileID: 7805016609789337310, guid: 5d5258b142093024ea3d626927e0c474,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,6 +285,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805016609789337297, guid: 5d5258b142093024ea3d626927e0c474,
+        type: 3}
+      propertyPath: m_Name
+      value: Turret_Diamond
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d5258b142093024ea3d626927e0c474, type: 3}

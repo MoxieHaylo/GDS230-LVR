@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TurretManager : MonoBehaviour
 {
-
     public List<GameObject> activeTurrets = new List<GameObject>();
     public int nextTurretToFire;
     public int turretWhichFired;
     public GameObject redTurret;
     public GameObject turret;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -29,7 +29,6 @@ public class TurretManager : MonoBehaviour
         
     }
 
-
     public void Shoot()
     {
         //Turret range will be 0 to 3
@@ -44,10 +43,7 @@ public class TurretManager : MonoBehaviour
             turret = activeTurrets[nextTurretToFire];
             TurretLogic logic = turret.GetComponent<TurretLogic>();
             logic.StartCoroutine(logic.Fire());
-            Debug.Log(nextTurretToFire);
             turretWhichFired = nextTurretToFire;
         }
-
-
     }
 }

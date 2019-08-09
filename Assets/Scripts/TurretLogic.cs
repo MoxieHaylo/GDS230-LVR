@@ -48,25 +48,7 @@ public class TurretLogic : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = rotation;
 
-        if(myStats.health <= 80)
-        {
-            speed = 0.18f;
-        }
-
-        if (myStats.health <= 60)
-        {
-            speed = 0.21f;
-        }
-
-        if (myStats.health <= 40)
-        {
-            speed = 0.24f;
-        }
-
-        if (myStats.health <= 20)
-        {
-            speed = 0.27f;
-        }
+  
 
 
     }
@@ -114,7 +96,6 @@ public class TurretLogic : MonoBehaviour
             waypoints[myCurrentWaypoint] = waypoints[0];
             waypoints[0] = t;
         }
-
     }
 
     public IEnumerator Fire()
@@ -124,26 +105,18 @@ public class TurretLogic : MonoBehaviour
             //animator.SetBool("isMoving", false);
 
             run = true;
-            //chargeUpParticle.Emit(1);
-            yield return new WaitForSeconds(3);
+            chargeUpParticle.Emit(1);
+            yield return new WaitForSeconds(4);
             fireChance = 0;
             //fireChance = Random.Range(0, 1);
             if (fireChance == 0)
                 shootProjectile();
-            int delayTime = Random.Range(1, 3);
+            int delayTime = Random.Range(2, 4);
             yield return new WaitForSeconds(delayTime);
-
             isMoving = true;
             //MoveToWaypoint();
         }
-
-
-
-
-
     }
-
-
 
     void shootProjectile()
     {
@@ -154,8 +127,4 @@ public class TurretLogic : MonoBehaviour
         }
        
     }
-    
-
-
-
 }

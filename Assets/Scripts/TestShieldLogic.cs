@@ -4,13 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class TestShieldLogic : MonoBehaviour
-{
-    
+{   
     public OrbType targetType;
     TestDeviceLogic charge;
-    //public GameObject targetOrb;
-    //public GameObject[] wrongOrbs;
-    
 
     // Start is called before the first frame update
     void Start()
@@ -23,16 +19,12 @@ public class TestShieldLogic : MonoBehaviour
     {
         
     }
-
-    
-
     private void OnTriggerEnter(Collider coll)
     {
         if(coll.GetComponent<ProjectileActions>())
         {
             if(coll.GetComponent<ProjectileActions>().type == targetType)
-            {
-                
+            {               
                 charge.GainCharge(20);
                 Destroy(coll.gameObject);
             }
@@ -41,15 +33,6 @@ public class TestShieldLogic : MonoBehaviour
                 charge.LoseCharge(-20);
                 Destroy(coll.gameObject);
             }
-        }
-        
-
-        
+        }   
     }
-
-    
-
-    
-
-
 }
