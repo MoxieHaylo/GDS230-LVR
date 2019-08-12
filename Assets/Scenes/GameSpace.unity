@@ -486,11 +486,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8539925102977147089, guid: 4a8731f0f77a20c42912c4fe8fbcb85b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8539925102977147091, guid: 4a8731f0f77a20c42912c4fe8fbcb85b,
         type: 3}
       propertyPath: m_Name
@@ -500,6 +495,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539925102977147089, guid: 4a8731f0f77a20c42912c4fe8fbcb85b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8539925102977147095, guid: 4a8731f0f77a20c42912c4fe8fbcb85b,
         type: 3}
@@ -7363,6 +7363,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 586654395}
     m_Modifications:
+    - target: {fileID: 637562464884269709, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_Name
+      value: TestShieldGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319042563566147639, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319042563566147639, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7933350515785015864, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632853296037002176, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632853296037002176, guid: f89032d94e38b6e4ea951eb73d98376d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 637562464884269704, guid: f89032d94e38b6e4ea951eb73d98376d,
         type: 3}
       propertyPath: Shields.Array.size
@@ -7479,11 +7509,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.20000005
       objectReference: {fileID: 0}
-    - target: {fileID: 637562464884269709, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_Name
-      value: TestShieldGenerator
-      objectReference: {fileID: 0}
     - target: {fileID: 637562464884269711, guid: f89032d94e38b6e4ea951eb73d98376d,
         type: 3}
       propertyPath: m_Enabled
@@ -7529,16 +7554,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 55d05a706fff3634592ef5d958d59d9f, type: 2}
-    - target: {fileID: 5632853296037002176, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5632853296037002176, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7660460375011788347, guid: f89032d94e38b6e4ea951eb73d98376d,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -7554,11 +7569,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.578
       objectReference: {fileID: 0}
-    - target: {fileID: 7933350515785015864, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7933350515785015865, guid: f89032d94e38b6e4ea951eb73d98376d,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -7568,16 +7578,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.775
-      objectReference: {fileID: 0}
-    - target: {fileID: 8319042563566147639, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8319042563566147639, guid: f89032d94e38b6e4ea951eb73d98376d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9175959275401510391, guid: f89032d94e38b6e4ea951eb73d98376d,
         type: 3}
@@ -10715,6 +10715,16 @@ PrefabInstance:
       propertyPath: Turrets.Array.data[2]
       value: 
       objectReference: {fileID: 1255690504}
+    - target: {fileID: 62116999328284557, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: m_Name
+      value: TestBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 62116999328284557, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 62116999328284553, guid: bad1706ce3f95084a8c6a5933d6807ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10748,16 +10758,6 @@ PrefabInstance:
     - target: {fileID: 62116999328284553, guid: bad1706ce3f95084a8c6a5933d6807ae,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 62116999328284557, guid: bad1706ce3f95084a8c6a5933d6807ae,
-        type: 3}
-      propertyPath: m_Name
-      value: TestBoss
-      objectReference: {fileID: 0}
-    - target: {fileID: 62116999328284557, guid: bad1706ce3f95084a8c6a5933d6807ae,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 62116999328284559, guid: bad1706ce3f95084a8c6a5933d6807ae,
@@ -10964,6 +10964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: simulationSpeed
       value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 62116999328284558, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad1706ce3f95084a8c6a5933d6807ae, type: 3}
