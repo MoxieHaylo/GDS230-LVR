@@ -17,6 +17,7 @@ public class BossLogic : MonoBehaviour
     public Animator doorAnimator;
     public Rigidbody[] turretBodies;
     private GameObject triggerBox;
+    public Animator[] turretAnimators;
 
 
 
@@ -71,10 +72,12 @@ public class BossLogic : MonoBehaviour
             turretBodies[1].useGravity = true;
             turretBodies[2].useGravity = true;
             turretBodies[3].useGravity = true;
+            turretAnimators[0].SetBool("isInactive", true);
+            turretAnimators[1].SetBool("isInactive", true);
+            turretAnimators[2].SetBool("isInactive", true);
+            turretAnimators[3].SetBool("isInactive", true);
             triggerBox.SetActive(false);
         }
-
-
     }
 
     private void OnTriggerEnter(Collider coll)

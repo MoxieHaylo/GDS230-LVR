@@ -9821,6 +9821,12 @@ Transform:
   m_Father: {fileID: 339388976}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1712185471 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4710789114839680024, guid: bad1706ce3f95084a8c6a5933d6807ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2037267501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1749180360
 GameObject:
   m_ObjectHideFlags: 0
@@ -9890,6 +9896,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!95 &1808626226 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1454862179833333764, guid: bad1706ce3f95084a8c6a5933d6807ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2037267501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1827133798
 GameObject:
   m_ObjectHideFlags: 0
@@ -11244,21 +11256,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 880195150520779340, guid: bad1706ce3f95084a8c6a5933d6807ae,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 880195150520779340, guid: bad1706ce3f95084a8c6a5933d6807ae,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 880195150520779340, guid: bad1706ce3f95084a8c6a5933d6807ae,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Turrets.Array.size
       value: 2
@@ -11323,6 +11320,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880195150520779340, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 880195150520779340, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 880195150520779340, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6097577336366092414, guid: bad1706ce3f95084a8c6a5933d6807ae,
         type: 3}
@@ -11476,6 +11488,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
         type: 3}
+      propertyPath: turretAnimators.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
       propertyPath: Turrets.Array.data[0]
       value: 
       objectReference: {fileID: 1877031240}
@@ -11559,6 +11576,26 @@ PrefabInstance:
       propertyPath: turretBodies.Array.data[3]
       value: 
       objectReference: {fileID: 1255690505}
+    - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: turretAnimators.Array.data[0]
+      value: 
+      objectReference: {fileID: 1712185471}
+    - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: turretAnimators.Array.data[1]
+      value: 
+      objectReference: {fileID: 2092370329}
+    - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: turretAnimators.Array.data[2]
+      value: 
+      objectReference: {fileID: 1808626226}
+    - target: {fileID: 7540179461721603992, guid: bad1706ce3f95084a8c6a5933d6807ae,
+        type: 3}
+      propertyPath: turretAnimators.Array.data[3]
+      value: 
+      objectReference: {fileID: 2058690798}
     - target: {fileID: 1454862179987183646, guid: bad1706ce3f95084a8c6a5933d6807ae,
         type: 3}
       propertyPath: simulationSpeed
@@ -11586,6 +11623,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad1706ce3f95084a8c6a5933d6807ae, type: 3}
+--- !u!95 &2058690798 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7235123459568001121, guid: bad1706ce3f95084a8c6a5933d6807ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2037267501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2082730914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11621,3 +11664,9 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2092370329 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3062234488971344146, guid: bad1706ce3f95084a8c6a5933d6807ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 2037267501}
+  m_PrefabAsset: {fileID: 0}
