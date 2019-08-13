@@ -14,6 +14,7 @@ public class TestDeviceLogic : MonoBehaviour
     public Transform chargeUI;
     public float uiScale = 0f;
 
+    /*
     public static UnityAction<bool> onHasController = null;
 
     public static UnityAction onTriggerUp = null;
@@ -23,6 +24,7 @@ public class TestDeviceLogic : MonoBehaviour
 
     private bool hasController = false;
     private bool inputActive = true;
+    */
 
     Vector2 primaryTouchpad;
 
@@ -45,7 +47,7 @@ public class TestDeviceLogic : MonoBehaviour
     {
         chargeUI = this.gameObject.transform.GetChild(0);
 
-        hasController = CheckForController(hasController);
+        //hasController = CheckForController(hasController);
 
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
         {
@@ -100,6 +102,7 @@ public class TestDeviceLogic : MonoBehaviour
         }
     }
 
+    /*
     private bool CheckForController(bool currentValue)
     {
         bool controllerCheck = OVRInput.IsControllerConnected(OVRInput.Controller.RTrackedRemote) ||
@@ -113,6 +116,7 @@ public class TestDeviceLogic : MonoBehaviour
 
         return false;
     }
+    */
 
     void SwapShield()
     {
@@ -147,12 +151,12 @@ public class TestDeviceLogic : MonoBehaviour
 
     public void PlayerFound()
     {
-        inputActive = true;
+        //inputActive = true;
     }
 
     public void PlayerLost()
     {
-        inputActive = false;
+        //inputActive = false;
     }
 
     public void GainCharge(int amount)
