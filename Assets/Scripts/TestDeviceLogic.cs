@@ -58,11 +58,11 @@ public class TestDeviceLogic : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
         {
             primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
-            if (primaryTouchpad.y > 0.2f)
+            if (primaryTouchpad.y > 0.2f && primaryTouchpad.x <0.2f && primaryTouchpad.x > -0.2f)
             {
                 shieldIndex = 3;
             }
-            else if (primaryTouchpad.y > -0.2f)
+            else if (primaryTouchpad.y > -0.2f && primaryTouchpad.x < 0.2f && primaryTouchpad.x > -0.2f)
             {
                 shieldIndex = 1;
             }
@@ -77,7 +77,7 @@ public class TestDeviceLogic : MonoBehaviour
                     shieldIndex = 2;
                 }
             }
-            print(primaryTouchpad);
+            //print(primaryTouchpad);
             SwapShield();
         }
 
@@ -120,16 +120,10 @@ public class TestDeviceLogic : MonoBehaviour
 
     void SwapShield()
     {
-       
-        
-
         if (shieldIndex >= 4)
         {
             shieldIndex = 0;
         }
-
-        
-
 
         Shields[0].SetActive(false);//r
         Shields[1].SetActive(false);//g
@@ -138,7 +132,7 @@ public class TestDeviceLogic : MonoBehaviour
         Shields[shieldIndex].SetActive(true);
     }
 
-    void SwapShield(int index)
+    /*void SwapShield(int index)
     {
         Shields[0].SetActive(false);
         Shields[1].SetActive(false);
@@ -147,7 +141,7 @@ public class TestDeviceLogic : MonoBehaviour
         Shields[index].SetActive(true);
 
         shieldIndex = index;
-    }
+    }*/
 
     public void PlayerFound()
     {

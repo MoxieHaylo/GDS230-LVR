@@ -13,6 +13,7 @@ public class BossLogic : MonoBehaviour
     public float OpeningSpeed = 1f;//speed at which the door opens.
     private float speed = 0;
     public TurretManager turretManager;
+    private Animator bossAnimator;
 
 
 
@@ -20,6 +21,7 @@ public class BossLogic : MonoBehaviour
     void Start()
     {
         health = 100;
+        bossAnimator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -40,15 +42,32 @@ public class BossLogic : MonoBehaviour
         {
             Turrets[0].SetActive(true);
             turretManager.activeTurrets.Add(Turrets[0]);
+            StartCoroutine(Halt());
+        }
+
+        if (health == 60)
+        {
+            StartCoroutine(Halt());
         }
 
         if (health == 40)
         {
             Turrets[1].SetActive(true);
             turretManager.activeTurrets.Add(Turrets[1]);
+            StartCoroutine(Halt());
         }
 
-        
+        if (health == 20)
+        {
+            StartCoroutine(Halt());
+        }
+
+        if (health == 0)
+        {
+            bossAnimator.SetBool("isDead", true);
+        }
+
+
     }
 
     private void OnTriggerEnter(Collider coll)
@@ -58,6 +77,18 @@ public class BossLogic : MonoBehaviour
             ChangeHealth(-20);
         }
 
+    }
+
+    //stop current firing procedures
+    IEnumerator Halt()
+    {
+        foreach(GameObject g in turretManager.activeTurrets)
+        {
+            g.GetComponent<TurretLogic>().StopAllCoroutines();
+        }
+        yield return new WaitForSeconds(1.0f);
+        turretManager.Shoot();
+        yield return null;
     }
 }
 

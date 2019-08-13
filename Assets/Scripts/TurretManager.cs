@@ -7,7 +7,7 @@ public class TurretManager : MonoBehaviour
     public List<GameObject> activeTurrets = new List<GameObject>();
     public int nextTurretToFire;
     public int turretWhichFired;
-    public GameObject redTurret;
+    //public GameObject redTurret;
     public GameObject turret;
 
     // Start is called before the first frame update
@@ -18,9 +18,10 @@ public class TurretManager : MonoBehaviour
 
     private void Start()
     {
-        redTurret = activeTurrets[0];
-        TurretLogic logic = redTurret.GetComponent<TurretLogic>();
-        logic.StartCoroutine(logic.Fire());
+        //redTurret = activeTurrets[0];
+        //TurretLogic logic = redTurret.GetComponent<TurretLogic>();
+        //logic.StartCoroutine(logic.Fire());
+        Shoot();
     }
 
     // Update is called once per frame
@@ -42,6 +43,10 @@ public class TurretManager : MonoBehaviour
         {
             turret = activeTurrets[nextTurretToFire];
             TurretLogic logic = turret.GetComponent<TurretLogic>();
+            foreach (GameObject g in activeTurrets)
+            {
+                g.GetComponent<TurretLogic>().StopAllCoroutines();
+            }
             logic.StartCoroutine(logic.Fire());
             turretWhichFired = nextTurretToFire;
         }

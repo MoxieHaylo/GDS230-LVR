@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class TurretLogic : MonoBehaviour
 {
-
-    public GameObject[] waypoints;
-
-    
+    public GameObject[] waypoints;   
     int myCurrentWaypoint;
     private int nextWaypoint;
     public GameObject myProjectile;
@@ -24,14 +21,9 @@ public class TurretLogic : MonoBehaviour
     public TurretManager turretManager;
     BossLogic myStats;
 
-    
-
-
-
     // Start is called before the first frame update
     void Start()
     {
-        
         isMoving = true;
         myCurrentWaypoint = 0;
         myStats = GetComponentInParent<BossLogic>();
@@ -43,14 +35,9 @@ public class TurretLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         Vector3 direction = myTarget.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = rotation;
-
-  
-
-
     }
 
     private void FixedUpdate()
@@ -60,13 +47,10 @@ public class TurretLogic : MonoBehaviour
             animator.SetBool("isMoving", true);
             run = false;
             MoveToWaypoint();
-        }
-
-        
-
+        }      
         if(isMoving == false)
         {
-            animator.SetBool("isMoving", false);
+            
             if (!run)
             {
 
@@ -84,14 +68,11 @@ public class TurretLogic : MonoBehaviour
         {
             isMoving = false;
             nextWaypoint = Random.Range(1, waypoints.Length);
-
             /*if (nextWaypoint == myCurrentWaypoint)
             {
                 nextWaypoint = Random.Range(0, waypoints.Length);
             }*/
-
             myCurrentWaypoint = nextWaypoint;
-
             GameObject t = waypoints[myCurrentWaypoint];
             waypoints[myCurrentWaypoint] = waypoints[0];
             waypoints[0] = t;
@@ -103,16 +84,16 @@ public class TurretLogic : MonoBehaviour
         if(turretNumber == turretManager.nextTurretToFire)
         {
             //animator.SetBool("isMoving", false);
-
             run = true;
+            animator.SetBool("isMoving", false);
             chargeUpParticle.Emit(1);
             yield return new WaitForSeconds(4);
             fireChance = 0;
             //fireChance = Random.Range(0, 1);
             if (fireChance == 0)
                 shootProjectile();
-            int delayTime = Random.Range(2, 4);
-            yield return new WaitForSeconds(delayTime);
+            //int delayTime = Random.Range(2, 4);
+            //yield return new WaitForSeconds(delayTime);
             isMoving = true;
             //MoveToWaypoint();
         }
