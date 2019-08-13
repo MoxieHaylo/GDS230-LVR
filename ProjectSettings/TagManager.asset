@@ -9,6 +9,7 @@ TagManager:
   - Boss
   - PlayerShot
   - Orb
+  - TriggerBox
   layers:
   - Default
   - TransparentFX

@@ -13,7 +13,10 @@ public class BossLogic : MonoBehaviour
     public float OpeningSpeed = 1f;//speed at which the door opens.
     private float speed = 0;
     public TurretManager turretManager;
-    private Animator bossAnimator;
+    public Animator bossAnimator;
+    public Animator doorAnimator;
+    public Rigidbody[] turretBodies;
+    private GameObject triggerBox;
 
 
 
@@ -21,7 +24,7 @@ public class BossLogic : MonoBehaviour
     void Start()
     {
         health = 100;
-        bossAnimator = GetComponentInChildren<Animator>();
+        triggerBox = GameObject.FindGameObjectWithTag("TriggerBox");
     }
 
     // Update is called once per frame
@@ -29,8 +32,7 @@ public class BossLogic : MonoBehaviour
     {
         if (health == 0)
         {
-            speed += Time.deltaTime * OpeningSpeed;
-            DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
+            
         }
 
     }
@@ -64,7 +66,12 @@ public class BossLogic : MonoBehaviour
 
         if (health == 0)
         {
-            bossAnimator.SetBool("isDead", true);
+            StartCoroutine(Ending());
+            turretBodies[0].useGravity = true;
+            turretBodies[1].useGravity = true;
+            turretBodies[2].useGravity = true;
+            turretBodies[3].useGravity = true;
+            triggerBox.SetActive(false);
         }
 
 
@@ -88,6 +95,20 @@ public class BossLogic : MonoBehaviour
         }
         yield return new WaitForSeconds(1.0f);
         turretManager.Shoot();
+        yield return null;
+    }
+
+    IEnumerator Ending()
+    {
+        foreach (GameObject g in turretManager.activeTurrets)
+        {
+            g.GetComponent<TurretLogic>().StopAllCoroutines();
+        }
+        bossAnimator.SetBool("isDead", true);
+        yield return new WaitForSeconds(6);
+        //speed += Time.deltaTime * OpeningSpeed;
+        //DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
+        doorAnimator.SetBool("isOpen", true);
         yield return null;
     }
 }
