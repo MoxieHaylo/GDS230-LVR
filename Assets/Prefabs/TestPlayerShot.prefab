@@ -92,7 +92,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &4801120665652864688
 Rigidbody:
@@ -129,11 +129,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4629368219584813336}
     m_Modifications:
-    - target: {fileID: 1684709664255356299, guid: d5aa3a368aafcc049bf3935c741d1070,
-        type: 3}
-      propertyPath: m_Name
-      value: Glowing_Orb
-      objectReference: {fileID: 0}
     - target: {fileID: 1684709664255356300, guid: d5aa3a368aafcc049bf3935c741d1070,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -203,6 +198,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684709664255356299, guid: d5aa3a368aafcc049bf3935c741d1070,
+        type: 3}
+      propertyPath: m_Name
+      value: Glowing_Orb
       objectReference: {fileID: 0}
     - target: {fileID: 6053884093862755929, guid: d5aa3a368aafcc049bf3935c741d1070,
         type: 3}

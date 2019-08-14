@@ -18,6 +18,7 @@ public class BossLogic : MonoBehaviour
     public Rigidbody[] turretBodies;
     private GameObject triggerBox;
     public Animator[] turretAnimators;
+    public Animator triggerBoxAnimator;
 
 
 
@@ -50,6 +51,7 @@ public class BossLogic : MonoBehaviour
 
         if (health == 60)
         {
+            triggerBoxAnimator.SetBool("isMovingBack", true);
             StartCoroutine(Halt());
         }
 
@@ -62,6 +64,7 @@ public class BossLogic : MonoBehaviour
 
         if (health == 20)
         {
+            triggerBoxAnimator.SetBool("isMovingBack2", true);
             StartCoroutine(Halt());
         }
 

@@ -27,7 +27,7 @@ public class TurretLogic : MonoBehaviour
         isMoving = true;
         myCurrentWaypoint = 0;
         myStats = GetComponentInParent<BossLogic>();
-        speed = 0.15f;
+        speed = 0.3f;
         chargeUpParticle = GetComponentInChildren<ParticleSystem>();
         animator = GetComponentInChildren<Animator>();
     }
@@ -87,13 +87,13 @@ public class TurretLogic : MonoBehaviour
             run = true;
             animator.SetBool("isMoving", false);
             chargeUpParticle.Emit(1);
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(1);
             fireChance = 0;
             //fireChance = Random.Range(0, 1);
             if (fireChance == 0)
                 shootProjectile();
             //int delayTime = Random.Range(2, 4);
-            //yield return new WaitForSeconds(delayTime);
+            yield return new WaitForSeconds(0.5f);
             isMoving = true;
             //MoveToWaypoint();
         }

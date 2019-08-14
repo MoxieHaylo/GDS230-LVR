@@ -28,7 +28,7 @@ public class TurretMovement : MonoBehaviour
 
     void MoveToWaypoint()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[myCurrentWaypoint].transform.position, 0.15f);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, waypoints[myCurrentWaypoint].transform.position, 1f);
 
         if (Vector3.Distance(this.transform.position, waypoints[myCurrentWaypoint].transform.position)<0.01f)
         {
