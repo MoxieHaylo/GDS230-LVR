@@ -5956,7 +5956,7 @@ Light:
   m_SpotAngle: 43.671047
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -11394,7 +11394,7 @@ PrefabInstance:
     - target: {fileID: 4243381922345699821, guid: f08f92e49be2b564690334477d197f95,
         type: 3}
       propertyPath: m_CastShadows
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08f92e49be2b564690334477d197f95, type: 3}
