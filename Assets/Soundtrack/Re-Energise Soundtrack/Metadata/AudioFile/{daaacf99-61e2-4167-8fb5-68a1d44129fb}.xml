@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{daaacf99-61e2-4167-8fb5-68a1d44129fb}">
+        <property name="assetPath">
+            <value>SFX/BossHit_02.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.024</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{083255f3-df65-42a9-9b47-30573b516e06}</destination>
+        </relationship>
+    </object>
+</objects>
