@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
     public static FMOD.Studio.EventInstance ShieldHum;
     public static FMOD.Studio.EventInstance ShieldBlock_09;
 
-    public static float gameProgression = 0f;
+    public static float gameProgression = 1f;
 
     public static FMOD.Studio.ParameterInstance gamePhase;
 

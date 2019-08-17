@@ -46,6 +46,7 @@ public class BossLogic : MonoBehaviour
         {
             Turrets[0].SetActive(true);
             turretManager.activeTurrets.Add(Turrets[0]);
+            AudioManager.gameProgression = 2f;
             StartCoroutine(Halt());
         }
 
@@ -59,6 +60,7 @@ public class BossLogic : MonoBehaviour
         {
             Turrets[1].SetActive(true);
             turretManager.activeTurrets.Add(Turrets[1]);
+            AudioManager.gameProgression = 3f;
             StartCoroutine(Halt());
         }
 
@@ -70,7 +72,9 @@ public class BossLogic : MonoBehaviour
 
         if (health == 0)
         {
+            AudioManager.gameProgression = 4f;
             StartCoroutine(Ending());
+            AudioManager.Playsound("BossDefeated_01");
             turretBodies[0].useGravity = true;
             turretBodies[1].useGravity = true;
             turretBodies[2].useGravity = true;

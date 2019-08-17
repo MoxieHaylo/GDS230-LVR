@@ -92,6 +92,7 @@ public class TurretLogic : MonoBehaviour
             //fireChance = Random.Range(0, 1);
             if (fireChance == 0)
                 shootProjectile();
+            AudioManager.Playsound("GeneratingShield_02");
             //int delayTime = Random.Range(2, 4);
             yield return new WaitForSeconds(0.5f);
             isMoving = true;

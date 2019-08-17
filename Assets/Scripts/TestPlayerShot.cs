@@ -29,6 +29,7 @@ public class TestPlayerShot : MonoBehaviour
     {
         if (coll.gameObject.tag == "Boss")
         {
+            AudioManager.Playsound("BossHit_02");
             Destroy(this.gameObject);
         }
 

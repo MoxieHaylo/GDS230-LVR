@@ -30,6 +30,7 @@ public class ProjectileActions : MonoBehaviour
     {
         if(coll.gameObject.tag == "Player")
         {
+            AudioManager.Playsound("PlayerCollision_01");
             Destroy(this.gameObject);
         }       
     }   

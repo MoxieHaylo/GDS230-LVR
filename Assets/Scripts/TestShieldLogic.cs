@@ -30,11 +30,13 @@ public class TestShieldLogic : MonoBehaviour
             {
                 onHitEmit = GetComponentInChildren<ParticleSystem>();
                 onHitEmit.Emit(10);
+                AudioManager.Playsound("ShieldBlock_09");
                 charge.GainCharge(20);
                 Destroy(coll.gameObject);
             }
             else
             {
+                AudioManager.Playsound("PlayerCollision_01");
                 charge.LoseCharge(-20);
                 Destroy(coll.gameObject);
             }

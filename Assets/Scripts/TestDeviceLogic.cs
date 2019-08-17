@@ -179,6 +179,7 @@ public class TestDeviceLogic : MonoBehaviour
 
     public void playerShoot()
     {
+        AudioManager.Playsound("BossHit_01");
         GameObject newShot = Instantiate(myShot, this.transform.position, this.transform.rotation);
     }
 }
