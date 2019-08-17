@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{b8fd0be8-a2b6-4a6c-a42b-c48fe7b9a3da}">
+        <property name="assetPath">
+            <value>Music/ReEnergiseScore.mp3</value>
+        </property>
+        <property name="isStreaming">
+            <value>true</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>405.89061224489797</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{083255f3-df65-42a9-9b47-30573b516e06}</destination>
+        </relationship>
+    </object>
+</objects>
