@@ -73,8 +73,8 @@ public class BossLogic : MonoBehaviour
         if (health == 0)
         {
             AudioManager.gameProgression = 4f;
-            StartCoroutine(Ending());
             AudioManager.Playsound("BossDefeated_01");
+            StartCoroutine(Ending());
             turretBodies[0].useGravity = true;
             turretBodies[1].useGravity = true;
             turretBodies[2].useGravity = true;
@@ -115,7 +115,7 @@ public class BossLogic : MonoBehaviour
             g.GetComponent<TurretLogic>().StopAllCoroutines();
         }
         bossAnimator.SetBool("isDead", true);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(8);
         //speed += Time.deltaTime * OpeningSpeed;
         //DoorWinOpen.transform.position = Vector3.Lerp(DoorWinOpen.transform.position, Open.position, speed);
         doorAnimator.SetBool("isOpen", true);
