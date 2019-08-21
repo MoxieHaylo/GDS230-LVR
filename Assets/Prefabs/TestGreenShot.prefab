@@ -131,6 +131,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2534397104922779312}
     m_Modifications:
+    - target: {fileID: 4021919235126325358, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Turret_Triangle
+      objectReference: {fileID: 0}
     - target: {fileID: 4021919235126325357, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,10 +206,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4021919235126325358, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
+    - target: {fileID: 4021919235126325356, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
         type: 3}
-      propertyPath: m_Name
-      value: Turret_Triangle
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021919235126325356, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021919235126325356, guid: ef9f394f2efa0a24eb896d1f719cd8ba,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.26357627
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef9f394f2efa0a24eb896d1f719cd8ba, type: 3}
@@ -221,6 +236,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2534397104922779312}
     m_Modifications:
+    - target: {fileID: 5622016307112877719, guid: 9728cc596c08bde4abab462b993a2875,
+        type: 3}
+      propertyPath: m_Name
+      value: Particle System Magical
+      objectReference: {fileID: 0}
     - target: {fileID: 5622016307112877738, guid: 9728cc596c08bde4abab462b993a2875,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -275,11 +295,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5622016307112877719, guid: 9728cc596c08bde4abab462b993a2875,
-        type: 3}
-      propertyPath: m_Name
-      value: Particle System Magical
       objectReference: {fileID: 0}
     - target: {fileID: 5622016307112877717, guid: 9728cc596c08bde4abab462b993a2875,
         type: 3}

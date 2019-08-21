@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class TestDeviceLogic : MonoBehaviour
 {
+    public float centerOffset = 0.5f;
+    public float radius = 0.4f;
     public GameObject[] Shields;
     public int shieldIndex;
     public int charge;
@@ -58,25 +60,53 @@ public class TestDeviceLogic : MonoBehaviour
         if (OVRInput.GetDown(OVRInput.Button.PrimaryTouchpad))
         {
             primaryTouchpad = OVRInput.Get(OVRInput.Axis2D.PrimaryTouchpad);
-            if (primaryTouchpad.y > 0.2f && primaryTouchpad.x <0.2f && primaryTouchpad.x > -0.2f)
+
+            if(primaryTouchpad.x > centerOffset - radius && primaryTouchpad.y < radius && primaryTouchpad.y > -radius)
+            {
+                // Right middle
+                shieldIndex = 0;
+            }
+            else if (primaryTouchpad.x < centerOffset - radius && primaryTouchpad.y < radius && primaryTouchpad.y > -radius)
+            {
+                // Left middle
+                shieldIndex = 1;
+            }
+            else if (primaryTouchpad.y > centerOffset - radius && primaryTouchpad.x < radius && primaryTouchpad.x > -radius)
+            {
+                // Right up
+                shieldIndex = 3;
+
+            }
+            else if (primaryTouchpad.y < centerOffset - radius && primaryTouchpad.x < radius && primaryTouchpad.x > -radius)
+            {
+                // Left down
+                shieldIndex = 2;
+            }
+
+
+
+            /*
+            if (primaryTouchpad.y > centerOffset && primaryTouchpad.x < centerOffset && primaryTouchpad.x > -centerOffset)
             {
                 shieldIndex = 3;
             }
-            else if (primaryTouchpad.y > -0.2f && primaryTouchpad.x < 0.2f && primaryTouchpad.x > -0.2f)
+            else if (primaryTouchpad.y > -centerOffset && primaryTouchpad.x < centerOffset && primaryTouchpad.x > -centerOffset)
             {
                 shieldIndex = 1;
             }
             else
             {
-                if (primaryTouchpad.x > 0.2f)
+                if (primaryTouchpad.x > centerOffset)
                 {
                     shieldIndex = 0;
                 }
-                else if (primaryTouchpad.x > -0.2f)
+                else if (primaryTouchpad.x > -centerOffset)
                 {
                     shieldIndex = 2;
                 }
             }
+            */
+
             //print(primaryTouchpad);
             SwapShield();
         }
